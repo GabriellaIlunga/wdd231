@@ -1,0 +1,29 @@
+@media (min-width: 768px) {
+    #menu-toggle {
+        display: none;
+    }
+
+    nav ul {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    nav a {
+        padding: 1rem 2rem;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    h1 {
+        grid-column: 1 / -1;
+    }
+
+    .card:nth-child(4) {
+        grid-column: 1 / -1;
+    }
+}

@@ -3,81 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 231 - Home Page</title>
-    <meta name="description" content="Course home page for WDD 231: Web Frontend Development, featuring a profile and dynamic course list.">
-    <meta name="author" content="Gabriella Ilunga">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    
+    <title>W01 Assignment: Course Home Page</title>
+    <meta name="description" content="Gabriella Mujinga - WDD 231 Course Home Page">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
-    
-    <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
     <script src="scripts/course.js" defer></script>
 </head>
 <body>
-
     <header>
-        <div class="header-container">
-            <svg class="logo" viewBox="0 0 100 100" width="50" height="50">
-                <circle cx="50" cy="50" r="40" fill="#cca43b" />
-                <text x="50" y="55" font-family="sans-serif" font-size="20" fill="white" text-anchor="middle">WDD</text>
-            </svg>
-            <span>Gabriella</span>
-        </div>
-        <button id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+        <h1>WDD 231: Web Frontend Development I</h1>
     </header>
 
     <nav>
-        <ul id="nav-menu">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Chamber</a></li>
-            <li><a href="#">Final</a></li>
+        <button id="menu-button">Menu</button>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="#">Chamber Project</a></li>
+            <li><a href="#">Final Project</a></li>
         </ul>
     </nav>
 
     <main>
-        <h1>Home</h1>
-        
-        <section class="card">
+        <section class="card about-card">
             <h2>About Me</h2>
-            <p>Welcome to my course portal! I am a software development student working hard to master frontend techniques and building interactive, responsive web experiences.</p>
+            <p>My name is Gabriella Mujinga. I am a software development student, and I'm about to finish my first certificate just now.</p>
+            <p>I enjoy learning new things about software development and creating websites. I am looking forward to creating my best website yet!</p>
         </section>
 
-        <section class="card">
-            <h2>Johannesburg, South Africa</h2>
-            <p>Known as the City of Gold, Johannesburg is a vibrant, bustling metropolis and the economic heart of South Africa.</p>
+        <section class="card photo-card">
+            <h2>Student Photo</h2>
+            <div class="photo-container">
+                <img src="images/profile.jpg" alt="Profile picture of Gabriella Mujinga" width="200" height="200" loading="lazy">
+            </div>
         </section>
 
-        <section class="card">
-            <h2>Certificate Courses</h2>
+        <section class="card courses-card">
+            <h2>Web Certificate Courses</h2>
             <div class="filter-buttons">
                 <button id="btn-all" class="btn active">All</button>
                 <button id="btn-cse" class="btn">CSE</button>
                 <button id="btn-wdd" class="btn">WDD</button>
             </div>
             
-            <div id="course-container" class="course-grid">
-                </div>
+            <div id="course-container" class="course-grid"></div>
             
-            <p class="credits-display">Total Credits Displayed: <span id="total-credits">0</span></p>
+            <div class="credits-display">
+                <p>The total credits for course listed above is <span id="total-credits">0</span></p>
+            </div>
         </section>
     </main>
 
     <footer>
-        <div class="footer-social">
-            <a href="https://github.com" target="_blank">GitHub</a>
-            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-        </div>
-        <div class="footer-info">
-            <p>&copy;<span id="currentyear"></span> | Gabriella | South Africa</p>
-            <p id="lastModified"></p>
-        </div>
+        <p>&copy; <span id="current-year"></span> • Gabriella Mujinga • South Africa</p>
+        <p id="last-modified"></p>
     </footer>
-
 </body>
 </html>

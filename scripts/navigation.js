@@ -1,6 +1,13 @@
-const menuToggle = document.getElementById('menu-toggle');
-const navMenu = document.getElementById('nav-menu');
+const menuButton = document.getElementById('menu-button');
+const navMenu = document.querySelector('.nav-menu');
 
-menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('show');
-});
+if (menuButton && navMenu) {
+    menuButton.addEventListener('click', () => {
+        navMenu.classList.toggle('open');
+        if (navMenu.classList.contains('open')) {
+            menuButton.textContent = '❌';
+        } else {
+            menuButton.textContent = 'Menu';
+        }
+    });
+}

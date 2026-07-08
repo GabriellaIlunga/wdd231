@@ -20,7 +20,6 @@ function displayMembers(members) {
         const card = document.createElement("section");
         card.className = "directory-card";
         
-        // Define membership labels
         const levels = { 1: "Member", 2: "Silver Partner", 3: "Gold Partner" };
         
         card.innerHTML = `
@@ -36,7 +35,7 @@ function displayMembers(members) {
     });
 }
 
-// Layout Switcher Functions
+
 gridBtn.addEventListener("click", () => {
     container.className = "grid-layout";
     gridBtn.classList.add("active");

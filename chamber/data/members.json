@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Lotus Fragrance Boutique",
+        "address": "Rosebank Mall, Johannesburg",
+        "phone": "+27 11 444 0192",
+        "website": "https://www.lotusfragrance.example.com",
+        "image": "lotus.webp",
+        "membershipLevel": 3,
+        "tagline": "Exquisite custom scent layering and designer perfumes."
+    },
+    {
+        "name": "Gold Coast Jewelers",
+        "address": "Sandton City, Johannesburg",
+        "phone": "+27 11 777 0231",
+        "website": "https://www.goldcoast.example.com",
+        "image": "gold_coast.webp",
+        "membershipLevel": 2,
+        "tagline": "Premium gold custom jewelry and fine accessories."
+    },
+    {
+        "name": "Apex Tech Solutions",
+        "address": "45 Technology Drive, Midrand",
+        "phone": "+27 11 888 4321",
+        "website": "https://www.apextech.example.com",
+        "image": "apex.png",
+        "membershipLevel": 1,
+        "tagline": "Software engineering consultancy and web solutions."
+    },
+    {
+        "name": "Vanguard Marketing",
+        "address": "12 Creative Hub, Rosebank",
+        "phone": "+27 11 222 9876",
+        "website": "https://www.vanguard.example.com",
+        "image": "vanguard.png",
+        "membershipLevel": 2,
+        "tagline": "Grow your local brand presence smoothly."
+    },
+    {
+        "name": "Summit Logistics",
+        "address": "88 Freight Road, Kempton Park",
+        "phone": "+27 11 333 1122",
+        "website": "https://www.summitlog.example.com",
+        "image": "summit.png",
+        "membershipLevel": 1,
+        "tagline": "Reliable commercial distribution across Southern Africa."
+    },
+    {
+        "name": "Sovereign Coffee Roasters",
+        "address": "77 Espresso Lane, Braamfontein",
+        "phone": "+27 11 999 5544",
+        "website": "https://www.sovereigncoffee.example.com",
+        "image": "sovereign.png",
+        "membershipLevel": 3,
+        "tagline": "Ethically sourced artisan coffee micro-roastery."
+    },
+    {
+        "name": "Horizon Web Architecture",
+        "address": "90 Digital Boulevard, Johannesburg",
+        "phone": "+27 11 666 7788",
+        "website": "https://www.horizonweb.example.com",
+        "image": "horizon.png",
+        "membershipLevel": 3,
+        "tagline": "Responsive frontend systems and cloud deployments."
+    }
+]

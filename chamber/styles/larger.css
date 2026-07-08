@@ -1,0 +1,38 @@
+@media (min-width: 768px) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        text-align: left;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 2rem;
+    }
+
+    #menu-button {
+        display: none; 
+    }
+
+    .nav-menu {
+        display: flex ;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .grid-layout {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .list-layout .directory-card {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .list-layout .directory-card > * {
+        margin: 0;
+    }
+}

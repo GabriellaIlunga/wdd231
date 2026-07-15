@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber of Commerce - Home</title>
+    <meta name="description" content="Welcome to the Chamber of Commerce home page. Connecting local businesses, driving growth, and building community.">
+    <meta name="author" content="Gabriella Mujinga">
+    
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+
+    <meta property="og:title" content="Chamber of Commerce - Home">
+    <meta property="og:description" content="Connecting local businesses, driving growth, and building community.">
+    <meta property="og:image" content="https://gabriellailunga.github.io/wdd231/chamber/images/share-preview.jpg">
+    <meta property="og:url" content="https://gabriellailunga.github.io/wdd231/chamber/index.html">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/home.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <img src="images/logo.png" alt="Chamber Logo">
+            <div class="header-title">Community Chamber of Commerce</div>
+        </div>
+    </header>
+
+    <nav>
+        <button id="menu-button">Menu</button>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="#">Join</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="home-grid">
+        <section class="hero-box">
+            <picture>
+                <source media="(min-width: 640px)" srcset="images/hero-large.jpg">
+                <div class="hero-box">
+    <img src="images/johannesburg-view.jpg" alt="Johannesburg city center skyline view" class="hero-image">
+    <div class="cta-overlay">
+        <h2>Empower Your Local Business</h2>
+        <p>Join the Chamber today to connect, grow, and thrive in our community.</p>
+        <a href="join.html" class="cta-btn">Join Now</a>
+    </div>
+     </picture>
+        </section>
+
+        <section class="events-card card">
+            <h2>Upcoming Events</h2>
+            <div class="event-item">
+                <h3>Business Networking Breakfast</h3>
+                <p><strong>Date:</strong> Thursday, July 23, 2026</p>
+                <p>Connect with local entrepreneurs over coffee and share ideas.</p>
+            </div>
+            <div class="event-item">
+                <h3>Digital Marketing Workshop</h3>
+                <p><strong>Date:</strong> August 11, 2026</p>
+                <p>Learn tips for improving your search ranking and customer outreach.</p>
+            </div>
+        </section>
+
+        <section class="weather-card card">
+            <h2>Local Weather</h2>
+            <div class="weather-current">
+                <div class="temp-wrapper">
+                    <img id="weather-icon" src="" alt="">
+                    <span id="current-temp">--</span>°C
+                </div>
+                <p id="weather-desc">Syncing current conditions...</p>
+            </div>
+            <hr>
+            <h3>3-Day Forecast</h3>
+            <div id="forecast-container" class="forecast-grid">
+            </div>
+        </section>
+
+        <section class="spotlight-section">
+            <h2>Business Spotlights</h2>
+            <div id="spotlight-container" class="spotlight-grid">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-contact">
+            <p>📍 123 Chamber Way, Johannesburg, South Africa</p>
+            <p>📞 +27 11 555 0123</p>
+            <p>✉️ info@chamber.co.za</p>
+        </div>
+        <hr>
+        <div class="footer-dev">
+            <p>&copy; <span id="current-year"></span> • Gabriella Mujinga • WDD 231</p>
+            <p id="last-modified"></p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -17,7 +17,7 @@
     }
 
     .nav-menu {
-        display: flex ;
+        display: flex;
         flex-direction: row;
         justify-content: center;
     }
@@ -34,5 +34,39 @@
     
     .list-layout .directory-card > * {
         margin: 0;
+    }
+
+    .home-grid {
+        display: grid;
+        grid-template-columns: 2fr 1.2fr;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .hero-box {
+        grid-column: 1 / span 2;
+    }
+    
+    .hero-image {
+        height: 400px;
+    }
+
+    .events-card {
+        grid-column: 1;
+    }
+
+    .weather-card {
+        grid-column: 2;
+    }
+
+    .spotlight-section {
+        grid-column: 1 / span 2;
+    }
+
+    .spotlight-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
     }
 }

@@ -324,3 +324,114 @@ footer hr {
     border-top: 1px dashed #dcdcdc;
     margin: 1rem 0;
 }
+
+.spotlight-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.spotlight-card:hover {
+    transform: translateY(-4px);
+}
+
+.spotlight-logo {
+    max-width: 120px;
+    height: auto;
+    margin: 1rem 0;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.level-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-left: 0.5rem;
+}
+
+.level-badge.gold {
+    background-color: #ffe082;
+    color: #6d4c41;
+    border: 1px solid #ffb300;
+}
+
+.level-badge.silver {
+    background-color: #eceff1;
+    color: #455a64;
+    border: 1px solid #b0bec5;
+}
+
+.card, .spotlight-card {
+    background-color: var(--bg-light);
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover, .spotlight-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(44, 76, 65, 0.15);
+}
+
+.spotlight-logo {
+    max-width: 120px;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.event-item {
+    background-color: var(--bg-gray);
+    border-left: 4px solid var(--accent-gold);
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.75rem;
+    border-radius: 0 6px 6px 0;
+}
+
+.event-item h3 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.1rem;
+}
+
+.event-item p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+@media (min-width: 640px) {
+    .home-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .hero-box {
+        grid-column: 1 / -1;
+    }
+
+    .spotlight-section {
+        grid-column: 1 / -1;
+    }
+
+    .spotlight-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+}

@@ -54,4 +54,53 @@ function displayWeather(data) {
   }
 }
 
+const membersUrl = 'data/members.json';
+
+async function fetchSpotlights() {
+  try {
+    const response = await fetch(membersUrl);
+    if (response.ok) {
+      const members = await response.json();
+      displaySpotlights(members);
+    } else {
+      console.error("Failed to load members JSON:", await response.text());
+    }
+  } catch (error) {
+    console.error("Error fetching spotlight members:", error);
+  }
+}
+
+function displaySpotlights(members) {
+  const spotlightContainer = document.getElementById('spotlight-container');
+  if (!spotlightContainer) return;
+
+  const eligibleMembers = members.filter(member => member.membershipLevel === 3 || member.membershipLevel === 2);
+
+  const shuffled = eligibleMembers.sort(() => 0.5 - Math.random());
+
+  const selectedMembers = shuffled.slice(0, 3);
+
+  spotlightContainer.innerHTML = '';
+
+  selectedMembers.forEach(member => {
+    const levelName = member.membershipLevel === 3 ? 'Gold' : 'Silver';
+    const levelClass = member.membershipLevel === 3 ? 'level-3' : 'level-2';
+
+    const cardHTML = `
+      <div class="spotlight-card card">
+        <h3>${member.name}</h3>
+        <img src="images/${member.image}" alt="${member.name} Logo" class="spotlight-logo">
+        <p class="tagline"><em>"${member.tagline || 'Proud Chamber Member'}"</em></p>
+        <hr>
+        <p><strong>Email:</strong> ${member.email}</p>
+        <p><strong>Phone:</strong> ${member.phone}</p>
+        <p><strong>Website:</strong> <a href="${member.website}" target="_blank">${member.website}</a></p>
+        <p class="membership-badge">Level: <span class="badge ${levelClass}">${levelName}</span></p>
+      </div>
+    `;
+    spotlightContainer.innerHTML += cardHTML;
+  });
+}
+
 fetchWeather();
+fetchSpotlights();

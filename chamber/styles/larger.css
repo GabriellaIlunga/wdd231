@@ -70,3 +70,37 @@
         gap: 1.5rem;
     }
 }
+
+@media (min-width: 1024px) {
+    main {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .hero-image {
+        height: 480px;
+    }
+
+    .hero-box h2 {
+        font-size: 2.2rem;
+    }
+
+    .card, .spotlight-card {
+        padding: 2rem;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+    }
+
+    .spotlight-grid {
+        gap: 2.5rem;
+    }
+
+    header {
+        justify-content: space-between;
+        padding: 2rem 5%;
+    }
+
+    header h1 {
+        font-size: 2.4rem;
+    }
+}

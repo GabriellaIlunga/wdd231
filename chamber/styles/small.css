@@ -18,8 +18,11 @@ body {
     padding: 0;
 }
 
-h1, h2, h3 {
+h1, h2, h3, .header-title {
     font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3 {
     color: var(--primary-color);
 }
 
@@ -51,7 +54,6 @@ header {
     margin: 0;
     font-size: 1.5rem;
     font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
     text-align: center;
     line-height: 1.3;
     color: #ffffff;
@@ -138,19 +140,91 @@ main {
     margin-bottom: 1.5rem;
 }
 
+.cta-btn,
+.info-btn,
+.close-modal,
+.submit-btn,
+.view-toggle-controls button {
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.cta-btn,
+.info-btn,
+.close-modal,
+.submit-btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    text-decoration: none;
+    border: none;
+}
+
 .view-toggle-controls button {
     padding: 10px 20px;
     border: 1px solid var(--primary-color);
     background-color: var(--bg-light);
     color: var(--primary-color);
-    cursor: pointer;
-    border-radius: 4px;
-    font-weight: bold;
 }
 
 .view-toggle-controls button.active {
     background-color: var(--primary-color);
     color: #ffffff;
+}
+
+.cta-btn,
+.close-modal {
+    background-color: var(--accent-gold);
+    color: #222222;
+}
+
+.info-btn,
+.submit-btn {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+.submit-btn {
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.card, 
+.spotlight-card, 
+.level-card,
+.thankyou-card {
+    background-color: var(--bg-light);
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.card, 
+.spotlight-card, 
+.level-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card, 
+.spotlight-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover, 
+.spotlight-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(44, 76, 65, 0.15);
+}
+
+.level-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.level-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    border-color: var(--accent-gold);
 }
 
 .grid-layout {
@@ -225,35 +299,27 @@ main {
     color: #2c4c41; 
 }
 
-.card, 
-.spotlight-card, 
-.level-card {
-    background-color: var(--bg-light);
-    border: 2px solid var(--primary-color);
-    border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+.level-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-left: 0.5rem;
 }
 
-.level-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+.level-badge.gold {
+    background-color: #ffe082;
+    color: #5d3c31;
+    border: 1px solid #ffb300;
 }
 
-.level-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    border-color: var(--accent-gold);
-}
-
-.card, 
-.spotlight-card {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card:hover, 
-.spotlight-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(44, 76, 65, 0.15);
+.level-badge.silver {
+    background-color: #eceff1;
+    color: #37474f;
+    border: 1px solid #b0bec5;
 }
 
 .home-grid {
@@ -298,37 +364,6 @@ main {
     margin: 0 0 1rem 0;
     font-size: 0.9rem;
     color: #ffffff;
-}
-
-.cta-btn,
-.info-btn,
-.close-modal,
-.submit-btn {
-    display: inline-block;
-    padding: 0.6rem 1.2rem;
-    border-radius: 4px;
-    font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
-    cursor: pointer;
-    text-decoration: none;
-    border: none;
-}
-
-.cta-btn,
-.close-modal {
-    background-color: var(--accent-gold);
-    color: #222222;
-}
-
-.info-btn,
-.submit-btn {
-    background-color: var(--primary-color);
-    color: #ffffff;
-}
-
-.submit-btn {
-    font-size: 1rem;
-    margin-top: 1rem;
 }
 
 .event-item {
@@ -421,29 +456,6 @@ main {
     margin: 1rem 0;
 }
 
-.level-badge {
-    display: inline-block;
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
-    font-weight: bold;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-left: 0.5rem;
-}
-
-.level-badge.gold {
-    background-color: #ffe082;
-    color: #5d3c31;
-    border: 1px solid #ffb300;
-}
-
-.level-badge.silver {
-    background-color: #eceff1;
-    color: #37474f;
-    border: 1px solid #b0bec5;
-}
-
 .join-container {
     display: flex;
     flex-direction: column;
@@ -455,6 +467,10 @@ main {
 .join-form-column,
 .membership-cards {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 0;
 }
 
 .join-form {
@@ -465,7 +481,6 @@ main {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
-    margin-top: 0;
     width: 100%;
 }
 
@@ -519,11 +534,33 @@ main {
     margin: 0;
 }
 
-.membership-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-    margin-top: 0;
+.membership-modal {
+    border: none;
+    border-radius: 8px;
+    padding: 0;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    max-width: 500px;
+    width: 90%;
+    margin: auto;
+}
+
+.membership-modal::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    padding: 2rem;
+    background-color: var(--bg-light);
+}
+
+.thankyou-card {
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.results-container p {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .animate-card {
@@ -561,39 +598,6 @@ main {
     50% {
         box-shadow: 0 6px 18px rgba(212, 175, 55, 0.45);
     }
-}
-
-.membership-modal {
-    border: none;
-    border-radius: 8px;
-    padding: 0;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    max-width: 500px;
-    width: 90%;
-    margin: auto;
-}
-
-.membership-modal::backdrop {
-    background: rgba(0, 0, 0, 0.6);
-}
-
-.modal-content {
-    padding: 2rem;
-    background-color: var(--bg-light);
-}
-
-.thankyou-card {
-    background-color: var(--bg-light);
-    border: 2px solid var(--primary-color);
-    padding: 2rem;
-    border-radius: 8px;
-    max-width: 600px;
-    margin: 2rem auto;
-}
-
-.results-container p {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #e0e0e0;
 }
 
 footer {

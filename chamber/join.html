@@ -3,22 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamber Membership Application - Join Us | Chamber of Commerce</title>
-    <meta name="description" content="Join the Chamber of Commerce to grow your business and connect with the community.">
+    <title>Join the Chamber of Commerce | Application Form</title>
+
+    <meta name="description" content="Apply for Chamber of Commerce membership today to grow your business, network with local leaders, and increase your community impact.">
     <meta name="author" content="Gabriella Mujinga">
 
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-    <meta property="og:title" content="Join the Chamber of Commerce">
-    <meta property="og:description" content="Apply for membership today to connect with local businesses and grow your community impact.">
-    <meta property="og:image" content="https://chamber.co.za/images/logo.png">
-    <meta property="og:url" content="https://chamber.co.za/join.html">
+    <meta property="og:title" content="Join the Chamber of Commerce - Member Application">
+    <meta property="og:description" content="Join the Chamber of Commerce today! Connect with local business leaders, gain valuable networking opportunities, and expand your community reach.">
+    <meta property="og:image" content="https://gabriellamujinga.github.io/wdd231/chamber/images/logo.png">
+    <meta property="og:url" content="https://gabriellamujinga.github.io/wdd231/chamber/join.html">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
     <script src="scripts/date.js" defer></script>
     <script src="scripts/join.js" defer></script>
 </head>
@@ -62,7 +65,7 @@
 
                     <label for="title" title="Organizational Title">
                         Organizational Title
-                        <input type="text" name="title" id="title" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" title="Minimum 7 characters. Only letters, spaces, and hyphens are allowed.">
+                        <input type="text" name="title" id="title" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" title="Minimum 7 characters. Letters, spaces, and hyphens only.">
                     </label>
 
                     <label for="email" title="Email Address">
@@ -107,7 +110,7 @@
 
                     <input type="hidden" name="timestamp" id="timestamp">
 
-                    <input type="submit" value="Submit Application" class="cta-btn submit-btn">
+                    <button type="submit" class="submit-btn">Submit Application</button>
                 </form>
             </div>
 

@@ -42,9 +42,11 @@ header {
     color: var(--text-light);
     padding: 1.5rem;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; 
+    align-items: center;    
+    justify-content: center;
     gap: 10px;
+    text-align: center;
 }
 
 .logo-area img {

@@ -1,11 +1,12 @@
 @media (min-width: 768px) {
     header {
         flex-direction: row;
+        justify-content: center; /* Centers both items together in the middle */
         align-items: center;
-        justify-content: center;
-        gap: 15px;
-        text-align: left;
+        text-align: center;      /* Keeps the text centered */
     }
+}
+    
 
     header h1 {
         margin: 0;
@@ -93,7 +94,6 @@
     .membership-cards { 
         grid-column: 2; 
     }
-}
 
 @media (min-width: 1024px) {
     main {

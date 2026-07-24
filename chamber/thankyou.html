@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Application Received</title>
+    <link rel="stylesheet" href="styles/small.css">
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <img src="images/logo.png" alt="Chamber Logo">
+        </div>
+        <h1 class="header-title">Chamber of Commerce</h1>
+    </header>
+
+    <nav>
+        <button id="menu-button" aria-label="Toggle Navigation Menu">☰ Menu</button>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="discover.html">Discover</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="thankyou-card">
+            <h1>Thank You for Joining!</h1>
+            <p>Your application has been successfully submitted. Below are the details we recorded for your application:</p>
+            
+            <div id="results" class="results-container">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Chamber of Commerce | Gabriella Mujinga Ilunga</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

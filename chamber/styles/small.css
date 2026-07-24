@@ -54,6 +54,7 @@ header {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     line-height: 1.3;
+    color: #ffffff;
 }
 
 nav {
@@ -210,13 +211,13 @@ main {
 
 .level-3 { 
     background-color: #f9f1d2; 
-    color: #b28900; 
+    color: #8c6b00; 
     border: 1px solid var(--accent-gold); 
 }
 
 .level-2 { 
     background-color: #e6e6e6; 
-    color: #555555; 
+    color: #333333; 
 }
 
 .level-1 { 
@@ -433,13 +434,13 @@ main {
 
 .level-badge.gold {
     background-color: #ffe082;
-    color: #6d4c41;
+    color: #5d3c31;
     border: 1px solid #ffb300;
 }
 
 .level-badge.silver {
     background-color: #eceff1;
-    color: #455a64;
+    color: #37474f;
     border: 1px solid #b0bec5;
 }
 
@@ -504,11 +505,18 @@ main {
     gap: 0.6rem;
 }
 
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 .join-form label.radio-label {
     flex-direction: row;
     align-items: center;
     font-weight: normal;
     cursor: pointer;
+    margin: 0;
 }
 
 .membership-cards {

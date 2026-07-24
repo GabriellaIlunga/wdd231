@@ -3,8 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamber Membership Application - Join Us</title>
+    <title>Chamber Membership Application - Join Us | Chamber of Commerce</title>
     <meta name="description" content="Join the Chamber of Commerce to grow your business and connect with the community.">
+    <meta name="author" content="Gabriella Mujinga">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <meta property="og:title" content="Join the Chamber of Commerce">
+    <meta property="og:description" content="Apply for membership today to connect with local businesses and grow your community impact.">
+    <meta property="og:image" content="https://chamber.co.za/images/logo.png">
+    <meta property="og:url" content="https://chamber.co.za/join.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles/small.css">
     <script src="scripts/date.js" defer></script>
     <script src="scripts/join.js" defer></script>
@@ -14,7 +27,7 @@
         <div class="logo-area">
             <img src="images/logo.png" alt="Chamber Logo" width="80" height="80">
         </div>
-        <h1 class="header-title">Chamber of Commerce</h1>
+        <p class="header-title">Chamber of Commerce</p>
     </header>
 
     <nav>
@@ -30,6 +43,8 @@
     </nav>
 
     <main class="join-main">
+        <h1>Chamber Membership Application - Join Us</h1>
+
         <div class="join-container">
             <div class="join-form-column">
                 <h2>Membership Application Form</h2>
@@ -67,18 +82,22 @@
 
                     <fieldset class="membership-fieldset">
                         <legend>Membership Level *</legend>
-                        <label class="radio-label">
-                            <input type="radio" name="membership" value="np" required> NP Membership (Non-Profit - No Fee)
-                        </label>
-                        <label class="radio-label">
-                            <input type="radio" name="membership" value="bronze"> Bronze Membership
-                        </label>
-                        <label class="radio-label">
-                            <input type="radio" name="membership" value="silver"> Silver Membership
-                        </label>
-                        <label class="radio-label">
-                            <input type="radio" name="membership" value="gold"> Gold Membership
-                        </label>
+                        <div class="radio-option">
+                            <input type="radio" name="membership" id="np" value="np" required>
+                            <label for="np" class="radio-label">NP Membership (Non-Profit - No Fee)</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="membership" id="bronze" value="bronze">
+                            <label for="bronze" class="radio-label">Bronze Membership</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="membership" id="silver" value="silver">
+                            <label for="silver" class="radio-label">Silver Membership</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="membership" id="gold" value="gold">
+                            <label for="gold" class="radio-label">Gold Membership</label>
+                        </div>
                     </fieldset>
 
                     <label for="description" title="Business Description">
@@ -93,86 +112,87 @@
             </div>
 
             <section class="membership-cards">
-    <h2>Membership Levels</h2>
-    
-    <div class="level-card animate-card">
-        <h3>NP Membership</h3>
-        <p>Free tier designed for registered Non-Profit Organizations.</p>
-        <button type="button" class="info-btn" data-modal="modal-np">Learn More</button>
-    </div>
+                <h2>Membership Levels</h2>
+                
+                <div class="level-card animate-card">
+                    <h3>NP Membership</h3>
+                    <p>Free tier designed for registered Non-Profit Organizations.</p>
+                    <button type="button" class="info-btn" data-modal="modal-np">Learn More</button>
+                </div>
 
-    <div class="level-card animate-card">
-        <h3>Bronze Membership</h3>
-        <p>Essential networking opportunities and directory listings.</p>
-        <button type="button" class="info-btn" data-modal="modal-bronze">Learn More</button>
-    </div>
+                <div class="level-card animate-card">
+                    <h3>Bronze Membership</h3>
+                    <p>Essential networking opportunities and directory listings.</p>
+                    <button type="button" class="info-btn" data-modal="modal-bronze">Learn More</button>
+                </div>
 
-    <div class="level-card animate-card">
-        <h3>Silver Membership</h3>
-        <p>Includes event discounts and home page spotlight rotations.</p>
-        <button type="button" class="info-btn" data-modal="modal-silver">Learn More</button>
-    </div>
+                <div class="level-card animate-card">
+                    <h3>Silver Membership</h3>
+                    <p>Includes event discounts and home page spotlight rotations.</p>
+                    <button type="button" class="info-btn" data-modal="modal-silver">Learn More</button>
+                </div>
 
-    <div class="level-card animate-card gold-card">
-        <h3>Gold Membership</h3>
-        <p>Premium positioning, free event access, and maximum exposure.</p>
-        <button type="button" class="info-btn" data-modal="modal-gold">Learn More</button>
-    </div>
-</section>
-
-        <dialog id="modal-np" class="membership-modal">
-            <div class="modal-content">
-                <h3>NP Membership Benefits</h3>
-                <p><strong>Cost:</strong> Free</p>
-                <ul>
-                    <li>Community directory listing</li>
-                    <li>Access to chamber networking events</li>
-                    <li>Volunteer participation opportunities</li>
-                </ul>
-                <button type="button" class="close-modal">Close</button>
-            </div>
-        </dialog>
-
-        <dialog id="modal-bronze" class="membership-modal">
-            <div class="modal-content">
-                <h3>Bronze Membership Benefits</h3>
-                <p><strong>Cost:</strong> $250 / year</p>
-                <ul>
-                    <li>Full directory profile with website link</li>
-                    <li>Invitation to monthly luncheons</li>
-                    <li>10% discount on chamber workshops</li>
-                </ul>
-                <button type="button" class="close-modal">Close</button>
-            </div>
-        </dialog>
-
-        <dialog id="modal-silver" class="membership-modal">
-            <div class="modal-content">
-                <h3>Silver Membership Benefits</h3>
-                <p><strong>Cost:</strong> $500 / year</p>
-                <ul>
-                    <li>All Bronze Benefits included</li>
-                    <li>Eligible for Home Page Spotlight rotation</li>
-                    <li>25% discount on event booths</li>
-                </ul>
-                <button type="button" class="close-modal">Close</button>
-            </div>
-        </dialog>
-
-        <dialog id="modal-gold" class="membership-modal">
-            <div class="modal-content">
-                <h3>Gold Membership Benefits</h3>
-                <p><strong>Cost:</strong> $1,000 / year</p>
-                <ul>
-                    <li>All Silver Benefits included</li>
-                    <li>Priority Home Page Spotlight positioning</li>
-                    <li>Free booth at annual business expo</li>
-                    <li>Sponsorship recognition at all major events</li>
-                </ul>
-                <button type="button" class="close-modal">Close</button>
-            </div>
-        </dialog>
+                <div class="level-card animate-card gold-card">
+                    <h3>Gold Membership</h3>
+                    <p>Premium positioning, free event access, and maximum exposure.</p>
+                    <button type="button" class="info-btn" data-modal="modal-gold">Learn More</button>
+                </div>
+            </section>
+        </div>
     </main>
+
+    <dialog id="modal-np" class="membership-modal">
+        <div class="modal-content">
+            <h3>NP Membership Benefits</h3>
+            <p><strong>Cost:</strong> Free</p>
+            <ul>
+                <li>Community directory listing</li>
+                <li>Access to chamber networking events</li>
+                <li>Volunteer participation opportunities</li>
+            </ul>
+            <button type="button" class="close-modal">Close</button>
+        </div>
+    </dialog>
+
+    <dialog id="modal-bronze" class="membership-modal">
+        <div class="modal-content">
+            <h3>Bronze Membership Benefits</h3>
+            <p><strong>Cost:</strong> $250 / year</p>
+            <ul>
+                <li>Full directory profile with website link</li>
+                <li>Invitation to monthly luncheons</li>
+                <li>10% discount on chamber workshops</li>
+            </ul>
+            <button type="button" class="close-modal">Close</button>
+        </div>
+    </dialog>
+
+    <dialog id="modal-silver" class="membership-modal">
+        <div class="modal-content">
+            <h3>Silver Membership Benefits</h3>
+            <p><strong>Cost:</strong> $500 / year</p>
+            <ul>
+                <li>All Bronze Benefits included</li>
+                <li>Eligible for Home Page Spotlight rotation</li>
+                <li>25% discount on event booths</li>
+            </ul>
+            <button type="button" class="close-modal">Close</button>
+        </div>
+    </dialog>
+
+    <dialog id="modal-gold" class="membership-modal">
+        <div class="modal-content">
+            <h3>Gold Membership Benefits</h3>
+            <p><strong>Cost:</strong> $1,000 / year</p>
+            <ul>
+                <li>All Silver Benefits included</li>
+                <li>Priority Home Page Spotlight positioning</li>
+                <li>Free booth at annual business expo</li>
+                <li>Sponsorship recognition at all major events</li>
+            </ul>
+            <button type="button" class="close-modal">Close</button>
+        </div>
+    </dialog>
 
     <footer>
         <div class="footer-contact">

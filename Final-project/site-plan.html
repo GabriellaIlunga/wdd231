@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Site Plan document for The Cozy Nook website project in WDD 231.">
+  <meta name="author" content="Gabriella Mujinga Ilunga">
+  <title>The Cozy Nook | Website Site Plan</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary-color: #2C1810;
+      --secondary-color: #8C2D19;
+      --accent-color: #D9822B;
+      --bg-color: #FDFBF7;
+      --card-bg: #F4EBE1;
+      --text-dark: #222222;
+      --text-light: #FDFBF7;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-dark);
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    header {
+      background-color: var(--primary-color);
+      color: var(--text-light);
+      padding: 2rem;
+      border-radius: 8px;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-family: 'Merriweather', serif;
+      font-size: 2.5rem;
+      color: var(--accent-color);
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    section {
+      background-color: white;
+      border: 1px solid var(--card-bg);
+      border-left: 6px solid var(--secondary-color);
+      padding: 1.5rem;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+      font-family: 'Merriweather', serif;
+      color: var(--secondary-color);
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--card-bg);
+      padding-bottom: 0.3rem;
+    }
+
+    h3 {
+      font-family: 'Merriweather', serif;
+      color: var(--primary-color);
+      margin: 1rem 0 0.5rem 0;
+    }
+
+    ul {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .color-box {
+      border-radius: 6px;
+      padding: 1rem;
+      text-align: center;
+      font-weight: bold;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .box-primary {
+      background-color: var(--primary-color);
+      color: var(--text-light);
+    }
+
+    .box-secondary {
+      background-color: var(--secondary-color);
+      color: var(--text-light);
+    }
+
+    .box-accent {
+      background-color: var(--accent-color);
+      color: var(--primary-color);
+    }
+
+    .box-bg {
+      background-color: var(--card-bg);
+      color: var(--primary-color);
+      border: 1px solid #ddd;
+    }
+
+    .heading-sample {
+      font-family: 'Merriweather', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+
+    .body-sample {
+      font-family: 'Nunito', sans-serif;
+      font-size: 1rem;
+    }
+
+    .wireframe-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 700px) {
+      .wireframe-container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .wireframe-box {
+      background-color: var(--bg-color);
+      border: 2px dashed var(--primary-color);
+      padding: 1rem;
+      border-radius: 6px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>The Cozy Nook</h1>
+    <p>Site Planning Document | WDD 231 Individual Project</p>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>1. Site Name & Identification</h2>
+      <p><strong>Site Name:</strong> The Cozy Nook</p>
+      <p><strong>Reason for Selection:</strong> The name evokes a warm, comfortable, and welcoming environment tailored for passionate readers. It captures the spirit of curling up with a mysterious thriller or a charming romance story, establishing an atmospheric brand for book discovery and goal tracking.</p>
+      <p><strong>Optional Domain Availability:</strong> <code>thecozynookreads.org</code></p>
+    </section>
+
+    <section>
+      <h2>2. Site Purpose</h2>
+      <p>The Cozy Nook serves as an atmospheric digital hub for readers who enjoy mystery, thriller, and romance novels. The site provides a curated discovery platform where users can dynamically filter books by genre, explore detailed plot overlays, track personal reading goals, and maintain a client-side reading log stored safely in their browser.</p>
+    </section>
+
+    <section>
+      <h2>3. Target Audience Scenarios</h2>
+      <ul>
+        <li><strong>Scenario 1:</strong> "Where can I find cozy mystery and romantic suspense recommendations filtered specifically by genre, along with character descriptions before I decide to read?"</li>
+        <li><strong>Scenario 2:</strong> "How can I log books I've recently completed, rate them out of five stars, and keep a personal reading list that saves automatically on my device?"</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. Color Scheme</h2>
+      <p>The color palette relies on deep, warm tones resembling a quiet library room—rich dark mahogany wood, warm burgundy book covers, ambient amber lighting, and cream-colored pages.</p>
+      
+      <div class="color-grid">
+        <div class="color-box box-primary">
+          Deep Espresso<br>#2C1810<br>(Primary Headers & Footer)
+        </div>
+        <div class="color-box box-secondary">
+          Warm Burgundy<br>#8C2D19<br>(Nav Accents & Buttons)
+        </div>
+        <div class="color-box box-accent">
+          Amber Gold<br>#D9822B<br>(Highlights & Badges)
+        </div>
+        <div class="color-box box-bg">
+          Cream Paper / Warm Sand<br>#FDFBF7 / #F4EBE1<br>(Background & Card Panels)
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>5. Typography</h2>
+      <p>Two complementary Google Fonts are used to balance classic literary elegance with clean, modern digital readability:</p>
+      
+      <h3>Heading Font: Merriweather (Serif)</h3>
+      <p class="heading-sample">The Cozy Nook — Chapter 1: The Mysterious Stranger</p>
+      <p><em>Used for: Site title, main page headings (H1, H2, H3), and book titles inside cards and modals.</em></p>
+      
+      <h3>Body Font: Nunito (Sans-Serif)</h3>
+      <p class="body-sample">Discover your next favorite page-turner. Filter through Whodunits, Cozy Mysteries, and Romantic Suspense novels while logging your progress.</p>
+      <p><em>Used for: Navigation links, body text, form inputs, buttons, and summary descriptions.</em></p>
+    </section>
+
+    <section>
+      <h2>6. Landing Page (index.html) Wireframe Plan</h2>
+      <p>Below is the visual structure outline for small (mobile) and large (desktop) viewports.</p>
+      
+      <div class="wireframe-container">
+        <div class="wireframe-box">
+          <h3>Small Viewport (Mobile: ~320px - 767px)</h3>
+          <ul>
+            <li><strong>Header:</strong> Brand logo/name + Hamburger toggle button.</li>
+            <li><strong>Nav:</strong> Vertical slide-out list (Home, Library, Tracker).</li>
+            <li><strong>Hero Section:</strong> Stacked banner image with welcoming headline and single call-to-action button ("Explore Library").</li>
+            <li><strong>Book of the Month:</strong> Single centered card layout with book cover stacked above title, badge, and summary.</li>
+            <li><strong>Genre Highlights:</strong> 1-column stacked cards linking to genre filters.</li>
+            <li><strong>Footer:</strong> Social icons, student copyright, video demo link, and attributions link stacked vertically.</li>
+          </ul>
+        </div>
+
+        <div class="wireframe-box">
+          <h3>Large Viewport (Desktop: 768px+)</h3>
+          <ul>
+            <li><strong>Header:</strong> Logo on left + horizontal inline navigation links on right with active wayfinding state.</li>
+            <li><strong>Hero Section:</strong> 2-column split layout (Left: Engaging copy & CTA; Right: High-resolution featured book graphic).</li>
+            <li><strong>Book of the Month:</strong> Horizontal card layout (Left: Large book cover; Right: Details, rating stars, and modal trigger button).</li>
+            <li><strong>Genre Highlights:</strong> 3-column responsive grid (Mystery, Romance, Thriller).</li>
+            <li><strong>Footer:</strong> Multi-column footer layout (Navigation shortcuts, project metadata, video demo, attributions).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Gabriella Mujinga Ilunga | WDD 231 Site Plan | The Cozy Nook</p>
+  </footer>
+
+</body>
+</html>

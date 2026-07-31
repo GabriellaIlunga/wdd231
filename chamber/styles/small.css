@@ -8,8 +8,8 @@
     --bg-light: #ffffff;        
     --bg-gray: #f4f6f5;
     --border-color: #dcdcdc;
-    --shadow-light: #00000014;
-    --shadow-medium: #00000026;
+    --shadow-light: rgba(0, 0, 0, 0.08);
+    --shadow-medium: rgba(0, 0, 0, 0.15);
 }
 
 * {
@@ -111,7 +111,7 @@ nav {
     padding: 0.9rem 1.5rem;
     text-decoration: none;
     font-weight: bold;
-    border-bottom: 1px solid #ffffff14;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     transition: all 0.2s ease;
 }
 
@@ -193,7 +193,7 @@ main {
 
 .card:hover, .spotlight-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 12px #2c4c4126;
+    box-shadow: 0 6px 12px rgba(44, 76, 65, 0.15);
 }
 
 .level-card:hover {
@@ -211,7 +211,7 @@ main {
 .directory-card {
     border: 1px solid var(--border-color);
     text-align: center;
-    box-shadow: 0 2px 4px #0000000d;
+    box-shadow: 0 2px 4px var(--shadow-light);
 }
 
 .directory-card img {
@@ -286,7 +286,7 @@ main {
     bottom: 0;
     left: 0;
     right: 0;
-    background: #2c4c41f2;
+    background: rgba(44, 76, 65, 0.95);
     color: var(--text-light);
     padding: 1.2rem;
     border-radius: 0 0 6px 6px;
@@ -386,7 +386,7 @@ main {
 .join-form input[type="tel"],
 .join-form textarea {
     padding: 0.6rem;
-    border: 1px solid #cccccc;
+    border: 1px solid var(--border-color);
     border-radius: 4px;
     font-size: 1rem;
     font-family: inherit;
@@ -394,7 +394,7 @@ main {
 }
 
 .membership-fieldset {
-    border: 1px solid #cccccc;
+    border: 1px solid var(--border-color);
     border-radius: 6px;
     padding: 1rem;
     display: flex;
@@ -416,13 +416,13 @@ main {
     border: none;
     border-radius: 8px;
     padding: 0;
-    box-shadow: 0 10px 25px #0000004d;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     max-width: 500px;
     width: 90%;
     margin: auto;
 }
 
-.membership-modal::backdrop { background: #00000099; }
+.membership-modal::backdrop { background: rgba(0, 0, 0, 0.6); }
 .modal-content { padding: 2rem; background-color: var(--bg-light); }
 
 .thankyou-card {
@@ -432,7 +432,7 @@ main {
 
 .results-container p {
     padding: 0.5rem 0;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .animate-card {
@@ -459,7 +459,7 @@ main {
 
 @keyframes goldGlow {
     0%, 100% { box-shadow: 0 4px 8px var(--shadow-light); }
-    50% { box-shadow: 0 6px 18px #d4af3773; }
+    50% { box-shadow: 0 6px 18px rgba(212, 175, 55, 0.45); }
 }
 
 footer {
@@ -474,43 +474,11 @@ footer {
 
 footer hr {
     border: 0;
-    border-top: 1px solid #ffffff33;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
     margin: 1rem 0;
 }
 
-#lastModified {
-    color: var(--accent-gold);
-    font-size: 0.85rem;
-    margin-top: 0.4rem;
-}
-
-@media screen and (min-width: 768px) {
-    .join-container {
-        display: grid;
-        grid-template-columns: 1.2fr 1fr;
-        gap: 2.5rem;
-        align-items: start;
-    }
-
-    .join-form-column { grid-column: 1; }
-    .membership-cards { grid-column: 2; }
-    #menu-button { display: none; }
-
-    .nav-menu {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .nav-menu li a { border-bottom: none; }
-
-    .nav-menu li a.active {
-        border-left: none;
-        border-bottom: 3px solid var(--accent-gold);
-    }
-}
-
-#last-modified {
+#last-modified, #lastModified {
     color: var(--accent-gold);
     font-size: 0.85rem;
     margin-top: 0.4rem;
@@ -578,6 +546,7 @@ footer hr {
     padding: 1.25rem;
     display: flex;
     flex-direction: column;
+    height: 100%;
     box-shadow: 0 2px 4px var(--shadow-light);
 }
 
@@ -589,13 +558,16 @@ footer hr {
 
 .discover-card figure {
     margin: 0 0 1rem 0;
+    width: 100%;
+    height: 200px;
     overflow: hidden;
     border-radius: 6px;
 }
 
 .discover-card img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
 }
 
@@ -611,6 +583,7 @@ footer hr {
     font-size: 0.95rem;
     line-height: 1.5;
     margin-bottom: 1.25rem;
+    flex-grow: 1;
 }
 
 .discover-card .learn-btn {
@@ -627,4 +600,30 @@ footer hr {
 
 .discover-card .learn-btn:hover {
     background-color: var(--primary-dark);
+}
+
+@media screen and (min-width: 768px) {
+    .join-container {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 2.5rem;
+        align-items: start;
+    }
+
+    .join-form-column { grid-column: 1; }
+    .membership-cards { grid-column: 2; }
+    #menu-button { display: none; }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .nav-menu li a { border-bottom: none; }
+
+    .nav-menu li a.active {
+        border-left: none;
+        border-bottom: 3px solid var(--accent-gold);
+    }
 }

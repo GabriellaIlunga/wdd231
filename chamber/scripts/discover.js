@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const card = document.createElement("section");
         card.classList.add("discover-card", `card-${index + 1}`);
 
-        // Set high priority eager loading for the first card to improve LCP score
+        
         const isFirst = index === 0;
         const loadingAttr = isFirst ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"';
 

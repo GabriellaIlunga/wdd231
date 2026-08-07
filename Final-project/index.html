@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Gabriella Mujinga Ilunga">
+  <meta name="description" content="Welcome to The Cozy Nook — your personal reading sanctuary. Discover curated book collections, track your daily reading goals, and record detailed reflections in one quiet place.">
+  <title>The Cozy Nook | Home</title>
+
+
+  <link rel="icon" type="image/ico" href="images/favi.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+</head>
+<body>
+
+  <header>
+    <button id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+    <div class="logo-container">
+      <h1 class="brand-title">The Cozy Nook</h1>
+      <p class="tagline">Your personal sanctuary for reading, tracking, & discovery</p>
+    </div>
+    <nav id="primary-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="library.html">Library Catalog</a>
+      <a href="tracker.html">Reading Tracker</a>
+      <a href="log.html">Reading Log</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro-section">
+      <div class="intro-grid">
+        <div class="intro-image-wrapper">
+          <img src="images/background.jpg" alt="A cozy reading corner with a warm cup of coffee and an open book" class="intro-image">
+        </div>
+        <div class="intro-content">
+          <h2>Welcome to The Cozy Nook</h2>
+          <p>
+            The Cozy Nook was created as a peaceful digital retreat for book lovers. Whether you are diving into a heart-pounding psychological thriller or unwinding with a lighthearted romantic comedy, our goal is to help you organize your reading journey, track your daily progress, and connect with a like-minded community of readers.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  
+    <section class="botm-hero" style="margin-top: 2.5rem;">
+      <div class="botm-badge">Book of the Month</div>
+      <div class="botm-content">
+        <div class="botm-cover-wrapper">
+          <img src="images/canyoukeepasecret.jpg" alt="Can You Keep a Secret? Book Cover" class="botm-cover">
+        </div>
+        <div class="botm-details">
+          <h2 class="botm-title">Can You Keep a Secret?</h2>
+          <p class="botm-author">by Sophie Kinsella</p>
+          <div class="botm-meta">
+            <span class="botm-genre">Romantic Comedy / Contemporary</span>
+            <span class="botm-rating">★★★★★ (5.0)</span>
+          </div>
+          <p class="botm-summary">
+            During a turbulent flight, Emma Corrigan spills all her deepest, most humiliating secrets to a handsome stranger sitting next to her. She thinks she'll never see him again—until she walks into work on Monday and meets her company's elusive founder and CEO.
+          </p>
+          <div class="botm-actions">
+            <a href="library.html" class="btn btn-primary">Find in Library</a>
+            <a href="tracker.html" class="btn btn-secondary">Track This Book</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="section-container" style="margin-top: 2.5rem;">
+      <h2 class="section-title">Readers' Favorites</h2>
+      <p class="section-subtitle">Top picks highly recommended by our community</p>
+
+      <!-- Genre Filter Pills -->
+      <div class="genre-pills">
+        <span class="pill active">All</span>
+        <span class="pill">Romantic Comedy</span>
+        <span class="pill">Psychological Thriller</span>
+        <span class="pill">Crime Thriller</span>
+      </div>
+
+      <div class="card-grid">
+        
+        <article class="card book-card">
+          <span class="badge">Must-Read</span>
+          <img src="images/liveflesh.jpg" alt="Live Flesh Cover" class="book-cover">
+          <h3>Live Flesh</h3>
+          <p class="author">by Ruth Rendell</p>
+          <p class="pages">272 Pages | Psychological Thriller</p>
+          <p class="description">A chilling and masterfully crafted exploration of obsession, consequence, and guilt after a violent crime.</p>
+          <br>
+          <a href="library.html" class="btn btn-secondary">View Details</a>
+        </article>
+
+        
+        <article class="card book-card">
+          <span class="badge">Top Rated</span>
+          <img src="images/PostMortem.jpg" alt="Postmortem Cover" class="book-cover">
+          <h3>Postmortem</h3>
+          <p class="author">by Patricia Cornwell</p>
+          <p class="pages">342 Pages | Crime Thriller</p>
+          <p class="description">A high-stakes forensic investigation following Dr. Kay Scarpetta as she races to track down an elusive serial killer.</p>
+          <br>
+          <a href="library.html" class="btn btn-secondary">View Details</a>
+        </article>
+
+        
+        <article class="card book-card">
+          <span class="badge">Fan Favorite</span>
+          <img src="images/undomestic.jpg" alt="The Undomestic Goddess Cover" class="book-cover">
+          <h3>The Undomestic Goddess</h3>
+          <p class="author">by Sophie Kinsella</p>
+          <p class="pages">400 Pages | Romantic Comedy</p>
+          <p class="description">After an unexpected mistake ruins her career, overworked attorney Samantha finds herself starting over in the countryside.</p>
+          <br>
+          <a href="library.html" class="btn btn-secondary">View Details</a>
+        </article>
+      </div>
+    </section>
+
+    
+    <section class="quote-container">
+      <blockquote class="daily-quote">
+        "A reader lives a thousand lives before he dies... The man who never reads lives only one."
+      </blockquote>
+      <cite class="quote-author">— George R.R. Martin</cite>
+    </section>
+
+    
+    <section class="section-container" style="margin-top: 2.5rem;">
+      <h2 class="section-title">Explore Your Sanctuary</h2>
+      <p class="section-subtitle">Select a destination to get started</p>
+      
+      <div class="card-grid">
+        <article class="card book-card">
+          <div class="card-body">
+            <h3>Library Catalog</h3>
+            <p class="description">Browse through our full collection of titles, complete with page counts and genres.</p>
+            <br>
+            <a href="library.html" class="btn btn-primary">View Collection</a>
+          </div>
+        </article>
+
+        <article class="card book-card">
+          <div class="card-body">
+            <h3>Reading Tracker</h3>
+            <p class="description">Keep accurate records of completed pages, reading statuses, and ratings.</p>
+            
+            
+            <div class="reading-goal-widget">
+              <div class="progress-bar-container">
+                <div class="progress-bar-fill" style="width: 65%;"></div>
+              </div>
+              <p class="goal-text">2026 Goal: 13 / 20 Books (65%)</p>
+            </div>
+
+            <br>
+            <a href="tracker.html" class="btn btn-primary">Log Progress</a>
+          </div>
+        </article>
+
+        <article class="card book-card">
+          <div class="card-body">
+            <h3>Reading Log</h3>
+            <p class="description">Save personal reflections, favorite quotes, and key takeaways from every story.</p>
+            <br>
+            <a href="log.html" class="btn btn-primary">Open Log</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    
+    <div class="bottom-grid-container" style="margin-top: 3rem;">
+      
+      <section class="section-container">
+        <h2 class="section-title">The Nook Forum</h2>
+        <p class="section-subtitle">Join the group discussion & share your thoughts</p>
+
+        <div class="form-container">
+          <h3>Start a Book Discussion</h3>
+          <form id="forum-form" action="#" method="get">
+            <label for="forum-name">Your Name</label>
+            <input type="text" id="forum-name" name="forum-name" placeholder="Enter your name" required>
+
+            <label for="forum-book">Book Title / Topic</label>
+            <input type="text" id="forum-book" name="forum-book" placeholder="e.g. Can You Keep a Secret? - Chapter 5" required>
+
+            <label for="forum-message">Discussion Post</label>
+            <textarea id="forum-message" name="forum-message" placeholder="What are your thoughts on this book?" required></textarea>
+
+            <button type="submit" class="btn btn-primary">Post to Group</button>
+          </form>
+        </div>
+      </section>
+
+      
+      <section class="section-container">
+        <h2 class="section-title">Contact Us</h2>
+        <p class="section-subtitle">Have questions or feedback? Send us a message</p>
+
+        <div class="form-container">
+          <h3>Get in Touch</h3>
+          <form id="contact-form" action="#" method="get">
+            <label for="contact-name">Full Name</label>
+            <input type="text" id="contact-name" name="contact-name" placeholder="Jane Doe" required>
+
+            <label for="contact-email">Email Address</label>
+            <input type="email" id="contact-email" name="contact-email" placeholder="janedoe@example.com" required>
+
+            <label for="contact-subject">Subject</label>
+            <select id="contact-subject" name="contact-subject">
+              <option value="general">General Inquiry</option>
+              <option value="recommendation">Book Recommendation</option>
+              <option value="feedback">Website Feedback</option>
+            </select>
+
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="contact-message" placeholder="Write your message here..." required></textarea>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 The Cozy Nook | All Rights Reserved</p>
+    
+    
+    <div class="social-links">
+      <p style="font-weight: 700; margin-bottom: 0.3rem;">Follow Us:</p>
+      <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a> | 
+      <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a> | 
+      <a href="https://goodreads.com" target="_blank" rel="noopener">Goodreads</a> | 
+      <a href="https://pinterest.com" target="_blank" rel="noopener">Pinterest</a>
+    </div>
+
+    <p id="lastModified"></p>
+  </footer>
+
+  <script src="scripts/main.js" defer></script>
+</body>
+</html>

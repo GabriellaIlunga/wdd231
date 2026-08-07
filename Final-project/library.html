@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse the complete catalog of books at The Cozy Nook.">
+  <meta name="author" content="Gabriella Mujinga Ilunga">
+  <title>The Cozy Nook | Library</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css" media="(min-width: 700px)">
+  <script src="scripts/library.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <h1>The Cozy Nook</h1>
+      <p class="tagline">Your Sanctuary for Mystery, Thriller &amp; Romance</p>
+    </div>
+    <button id="hamburger-btn" aria-label="Toggle Navigation" aria-expanded="false">&#9776;</button>
+    <nav id="primary-nav">
+      <a href="index.html">Home</a>
+      <a href="library.html" class="active">Library</a>
+      <a href="tracker.html">Tracker</a>
+      <a href="log.html">Log</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Book Collection</h2>
+
+    <div class="filter-controls">
+      <input type="text" id="search-input" placeholder="Search by title or author...">
+      <select id="genre-filter">
+        <option value="all">All Genres</option>
+        <option value="mystery">Cozy Mystery</option>
+        <option value="thriller">Psychological Thriller</option>
+        <option value="romance">Romantic Suspense</option>
+      </select>
+    </div>
+
+    <div id="book-container" class="card-grid"></div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Gabriella Mujinga Ilunga | The Cozy Nook</p>
+    <p><span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>

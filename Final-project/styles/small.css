@@ -44,14 +44,14 @@ body {
 header {
   background-color: var(--primary-color);
   color: var(--text-light);
-  padding: 1.8rem 1rem 1.4rem 1rem;
+  padding: 1.8rem 1rem 1.4rem;
   position: relative;
   border-bottom: 4px solid var(--accent-color);
   box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
-  align-items: center;    
-  text-align: center;      
+  align-items: center;
+  text-align: center;
 }
 
 .logo-container {
@@ -60,7 +60,6 @@ header {
   margin: 0 auto;
 }
 
-.logo-container h1,
 .brand-title {
   font-family: var(--font-heading);
   font-size: 2.2rem;
@@ -68,12 +67,11 @@ header {
   color: var(--accent-color);
   line-height: 1.15;
   letter-spacing: 0.5px;
-  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .tagline {
   font-size: 0.92rem;
-  color: #FDFBF7;
+  color: var(--text-light);
   font-style: italic;
   margin-top: 0.35rem;
   opacity: 0.9;
@@ -99,10 +97,9 @@ header {
 #hamburger-btn:hover {
   background-color: var(--accent-color);
   color: var(--primary-color);
-  box-shadow: 0 0 10px rgba(217, 130, 43, 0.5);
+  box-shadow: var(--shadow-glow);
 }
 
-nav,
 #primary-nav {
   display: none;
   flex-direction: column;
@@ -113,12 +110,10 @@ nav,
   padding-top: 0.8rem;
 }
 
-nav.open,
 #primary-nav.open {
   display: flex;
 }
 
-nav a,
 #primary-nav a {
   color: var(--text-light);
   text-decoration: none;
@@ -130,9 +125,7 @@ nav a,
   transition: all 0.3s ease;
 }
 
-nav a:hover, 
-nav a.active,
-#primary-nav a:hover, 
+#primary-nav a:hover,
 #primary-nav a.active {
   background-color: var(--accent-color);
   color: var(--primary-color);
@@ -140,7 +133,7 @@ nav a.active,
 
 main {
   flex: 1;
-  padding: 1.25rem 1rem 3.5rem 1rem;
+  padding: 1.25rem 1rem 3.5rem;
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
@@ -151,6 +144,12 @@ h2 {
   color: var(--secondary-color);
   margin-bottom: 1rem;
   font-size: 1.5rem;
+}
+
+h3 {
+  font-family: var(--font-heading);
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
 }
 
 .section-title {
@@ -166,13 +165,6 @@ h2 {
   font-size: 0.95rem;
 }
 
-h3 {
-  font-family: var(--font-heading);
-  color: var(--primary-color);
-  margin-bottom: 0.5rem;
-}
-
-/* INTRO SECTION LAYOUT */
 .intro-section {
   background-color: var(--card-bg);
   border: 2px solid var(--primary-color);
@@ -213,21 +205,6 @@ h3 {
   line-height: 1.6;
 }
 
-
-.hero {
-  background-color: var(--card-bg);
-  border: 2px solid var(--primary-color);
-  border-left: 6px solid var(--accent-color);
-  padding: 1.5rem;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-  box-shadow: var(--shadow-sm);
-}
-
-.hero p {
-  margin: 0.75rem 0 1.25rem 0;
-}
-
 .botm-hero {
   background-color: var(--card-bg);
   border: 2px solid var(--primary-color);
@@ -236,7 +213,7 @@ h3 {
   border-radius: var(--radius-md);
   padding: 1.5rem 1.25rem;
   max-width: 520px;
-  margin: 0 auto 2rem auto;
+  margin: 0 auto 2rem;
   box-shadow: var(--shadow-md);
   display: flex;
   flex-direction: column;
@@ -261,7 +238,7 @@ h3 {
   border-radius: 20px;
   text-transform: uppercase;
   letter-spacing: 0.8px;
-  margin: 0 auto 1rem auto;
+  margin: 0 auto 1rem;
   border: 1px solid var(--primary-color);
 }
 
@@ -281,7 +258,7 @@ h3 {
   object-fit: cover;
   border-radius: 8px;
   margin: 0 auto;
-  box-shadow: 0 6px 16px rgba(44, 24, 16, 0.2);
+  box-shadow: var(--shadow-sm);
   border: 2px solid var(--primary-color);
   outline: 2px solid var(--accent-color);
   outline-offset: 2px;
@@ -344,7 +321,6 @@ h3 {
   margin: 0 auto;
 }
 
-/* GENRE PILLS FILTER */
 .genre-pills {
   display: flex;
   flex-wrap: wrap;
@@ -371,7 +347,6 @@ h3 {
   border-color: var(--primary-color);
 }
 
-/* CARDS & GRID */
 .card-grid {
   display: flex;
   flex-direction: column;
@@ -411,13 +386,13 @@ h3 {
   border-radius: 6px;
   margin-bottom: 0.85rem;
   border: 2px solid var(--primary-color);
-  box-shadow: 0 4px 12px rgba(44, 24, 16, 0.18);
+  box-shadow: var(--shadow-sm);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .book-card:hover .book-cover {
   transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 6px 16px rgba(44, 24, 16, 0.3);
+  box-shadow: var(--shadow-md);
 }
 
 .badge {
@@ -454,7 +429,6 @@ h3 {
   line-height: 1.5;
 }
 
-/* READING GOAL WIDGET */
 .reading-goal-widget {
   background: var(--bg-color);
   border: 1.5px solid var(--primary-color);
@@ -485,7 +459,6 @@ h3 {
   color: var(--primary-color);
 }
 
-/* DAILY QUOTE BANNER */
 .quote-container {
   background-color: var(--primary-color);
   color: var(--text-light);
@@ -555,13 +528,12 @@ h3 {
   border-color: var(--primary-color);
 }
 
-
 .bottom-grid-container {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   max-width: 900px;
-  margin: 2rem auto 0 auto;
+  margin: 2rem auto 0;
 }
 
 .form-container {
@@ -612,7 +584,7 @@ h3 {
 .form-container textarea:focus {
   outline: none;
   border-color: var(--accent-color);
-  box-shadow: 0 0 6px rgba(217, 130, 43, 0.4);
+  box-shadow: var(--shadow-glow);
 }
 
 .form-container .btn {
@@ -637,7 +609,6 @@ h3 {
   from { opacity: 0; transform: translateY(-5px); }
   to { opacity: 1; transform: translateY(0); }
 }
-
 
 footer {
   background-color: var(--primary-color);

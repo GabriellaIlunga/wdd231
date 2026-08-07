@@ -213,7 +213,7 @@ h3 {
   border-radius: var(--radius-md);
   padding: 1.5rem 1.25rem;
   max-width: 520px;
-  margin: 0 auto 2rem;
+  margin: 2.5rem auto 2rem;
   box-shadow: var(--shadow-md);
   display: flex;
   flex-direction: column;
@@ -299,7 +299,7 @@ h3 {
 }
 
 .botm-rating {
-  color: var(--accent-color);
+  color: var(--secondary-color);
   font-weight: 800;
 }
 
@@ -319,6 +319,11 @@ h3 {
   width: 100%;
   max-width: 280px;
   margin: 0 auto;
+}
+
+.favorites-section,
+.sanctuary-section {
+  margin-top: 2.5rem;
 }
 
 .genre-pills {
@@ -353,7 +358,8 @@ h3 {
   gap: 1.5rem;
 }
 
-.card {
+/* Renamed to .nook-card to prevent Bootstrap warnings */
+.nook-card {
   background-color: var(--card-bg);
   border: 2px solid var(--primary-color);
   border-bottom: 4px solid var(--accent-color);
@@ -363,7 +369,7 @@ h3 {
   transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card:hover {
+.nook-card:hover {
   transform: translateY(-4px);
   border-color: var(--accent-color);
   border-bottom-color: var(--primary-color);
@@ -395,7 +401,8 @@ h3 {
   box-shadow: var(--shadow-md);
 }
 
-.badge {
+/* Renamed to .nook-badge to prevent Bootstrap warnings */
+.nook-badge {
   display: inline-block;
   align-self: center;
   background-color: var(--accent-color);
@@ -451,6 +458,7 @@ h3 {
 .progress-bar-fill {
   background-color: var(--accent-color);
   height: 100%;
+  width: 65%;
 }
 
 .goal-text {
@@ -485,7 +493,8 @@ h3 {
   opacity: 0.85;
 }
 
-.btn {
+/* Renamed to .nook-btn to prevent Bootstrap warnings */
+.nook-btn {
   display: inline-block;
   padding: 0.75rem 1.25rem;
   border: 2px solid var(--primary-color);
@@ -500,29 +509,29 @@ h3 {
   margin-top: auto;
 }
 
-.btn:active {
+.nook-btn:active {
   transform: scale(0.98);
 }
 
-.btn-primary {
+.nook-btn-primary {
   background-color: var(--secondary-color);
   color: var(--text-light);
   border-color: var(--primary-color);
 }
 
-.btn-primary:hover {
+.nook-btn-primary:hover {
   background-color: var(--primary-color);
   border-color: var(--accent-color);
   color: var(--accent-color);
 }
 
-.btn-secondary {
+.nook-btn-secondary {
   background-color: var(--primary-color);
   color: var(--text-light);
   border-color: var(--accent-color);
 }
 
-.btn-secondary:hover {
+.nook-btn-secondary:hover {
   background-color: var(--accent-color);
   color: var(--primary-color);
   border-color: var(--primary-color);
@@ -533,7 +542,7 @@ h3 {
   flex-direction: column;
   gap: 1.5rem;
   max-width: 900px;
-  margin: 2rem auto 0;
+  margin: 3rem auto 0;
 }
 
 .form-container {
@@ -587,7 +596,7 @@ h3 {
   box-shadow: var(--shadow-glow);
 }
 
-.form-container .btn {
+.form-container .nook-btn {
   padding: 0.55rem 1rem;
   font-size: 0.9rem;
   margin-top: 0.4rem;
@@ -631,6 +640,11 @@ footer a:hover {
 
 .social-links {
   margin: 0.75rem 0;
+}
+
+.social-heading {
+  font-weight: 700;
+  margin-bottom: 0.3rem;
 }
 
 #lastModified {

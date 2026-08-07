@@ -352,56 +352,70 @@ h3 {
   border-color: var(--primary-color);
 }
 
-.card-grid {
+/* ===================================================
+   CARD GRID & BOOK CARD BORDERS (Mobile / Small Screens)
+   =================================================== */
+
+.card-grid,
+#favorites-container,
+#library-container {
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  flex-direction: row;
+  overflow-x: auto;
+  gap: 1.25rem;
+  padding-bottom: 1rem;
+  scroll-snap-type: x mandatory;
 }
 
-/* Renamed to .nook-card to prevent Bootstrap warnings */
-.nook-card {
+/* General Book Card Borders & Framing */
+.nook-card,
+.book-card,
+.card {
+  flex: 0 0 280px;
+  scroll-snap-align: start;
   background-color: var(--card-bg);
   border: 2px solid var(--primary-color);
   border-bottom: 4px solid var(--accent-color);
   border-radius: var(--radius-md);
-  padding: 1.5rem;
+  padding: 1.25rem 1rem;
   box-shadow: var(--shadow-sm);
   transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
 
-.nook-card:hover {
+.nook-card:hover,
+.book-card:hover,
+.card:hover {
   transform: translateY(-4px);
   border-color: var(--accent-color);
   border-bottom-color: var(--primary-color);
   box-shadow: var(--shadow-glow);
 }
 
-.book-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  height: 100%;
-  justify-content: space-between;
-}
-
-.book-cover {
+.book-cover,
+.nook-card img,
+.book-card img {
   width: 140px;
   height: 210px;
   object-fit: cover;
   border-radius: 6px;
-  margin-bottom: 0.85rem;
+  margin: 0 auto 0.85rem auto;
   border: 2px solid var(--primary-color);
   box-shadow: var(--shadow-sm);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.book-card:hover .book-cover {
+.book-card:hover .book-cover,
+.nook-card:hover img {
   transform: translateY(-2px) scale(1.02);
   box-shadow: var(--shadow-md);
 }
 
-/* Renamed to .nook-badge to prevent Bootstrap warnings */
 .nook-badge {
   display: inline-block;
   align-self: center;
@@ -493,7 +507,6 @@ h3 {
   opacity: 0.85;
 }
 
-/* Renamed to .nook-btn to prevent Bootstrap warnings */
 .nook-btn {
   display: inline-block;
   padding: 0.75rem 1.25rem;

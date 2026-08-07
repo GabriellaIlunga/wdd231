@@ -32,10 +32,27 @@
     max-height: 220px;
   }
 
-  .card-grid {
+  /* Reader's Favorites & Sanctuary Horizontal 3-Column Grid Layout */
+  .nook-card-grid,
+  .card-grid,
+  #favorites-container,
+  #library-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.8rem;
+    gap: 1.5rem;
+    align-items: stretch;
+    overflow-x: visible;
+  }
+
+  /* Card sizing resets to allow grid expansion */
+  .nook-card,
+  .nook-book-card,
+  .book-card,
+  .card {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    flex: initial;
   }
 
   .filter-controls {

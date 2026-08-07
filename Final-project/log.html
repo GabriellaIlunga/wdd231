@@ -3,20 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Submit reading log entries and feedback to The Cozy Nook.">
-  <meta name="author" content="Gabriella Mujinga Ilunga">
+  
   <title>The Cozy Nook | User Log</title>
+  <meta name="description" content="Submit reading log entries and feedback to The Cozy Nook. Track your completed books and share your thoughts with our reading community.">
+  <meta name="author" content="Gabriella Mujinga Ilunga">
+  
+ 
+  
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  
+ 
+  
+  <meta property="og:title" content="The Cozy Nook | User Log">
+  <meta property="og:description" content="Submit reading log entries and feedback to The Cozy Nook. Track your completed books and share your thoughts with our reading community.">
+  <meta property="og:image" content="https://gabriellailunga.github.io/wdd231/Final-project/images/favicon.png">
+  <meta property="og:url" content="https://gabriellailunga.github.io/wdd231/Final-project/log.html">
+  <meta property="og:type" content="website">
+
+ 
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+  
+  
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/large.css" media="(min-width: 700px)">
+
+  
+  
   <script src="scripts/log.js" defer></script>
 </head>
 <body>
+
+  
+  
   <header>
     <div class="logo-container">
-      <h1>The Cozy Nook</h1>
+      <p class="brand-title">The Cozy Nook</p>
       <p class="tagline">Your Sanctuary for Mystery, Thriller &amp; Romance</p>
     </div>
     <button id="hamburger-btn" aria-label="Toggle Navigation" aria-expanded="false">&#9776;</button>
@@ -28,8 +53,10 @@
     </nav>
   </header>
 
+  
+  
   <main class="form-page">
-    <h2>Client Reading Log &amp; Reviews</h2>
+    <h1>Client Reading Log &amp; Reviews</h1>
 
     <form id="log-form" class="form-container">
       <label for="reader-name">Reader Name</label>
@@ -48,15 +75,18 @@
       <label for="log-notes">Review / Reading Journal Entry</label>
       <textarea id="log-notes" name="logNotes" rows="5" required placeholder="Share your thoughts about books you have recently completed..."></textarea>
 
-      <button type="submit" class="btn btn-primary">Submit Journal Log</button>
+      <button type="submit" class="nook-btn-primary">Submit Journal Log</button>
     </form>
 
     <div id="log-confirmation" class="confirmation-msg"></div>
   </main>
 
+ 
+  
   <footer>
     <p>&copy; 2026 Gabriella Mujinga Ilunga | The Cozy Nook</p>
     <p><span id="lastModified"></span></p>
   </footer>
+
 </body>
 </html>

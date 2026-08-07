@@ -3,20 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Browse the complete catalog of books at The Cozy Nook.">
-  <meta name="author" content="Gabriella Mujinga Ilunga">
+  
   <title>The Cozy Nook | Library</title>
+  <meta name="description" content="Browse the complete catalog of books at The Cozy Nook. Search by title, author, or genre to discover your next favorite read.">
+  <meta name="author" content="Gabriella Mujinga Ilunga">
+  
+ 
+  
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  
+  
+  
+  <meta property="og:title" content="The Cozy Nook | Library">
+  <meta property="og:description" content="Browse the complete catalog of books at The Cozy Nook. Search by title, author, or genre to discover your next favorite read.">
+  <meta property="og:image" content="https://gabriellailunga.github.io/wdd231/Final-project/images/favicon.png">
+  <meta property="og:url" content="https://gabriellailunga.github.io/wdd231/Final-project/library.html">
+  <meta property="og:type" content="website">
+
+  
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+  
+  
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/large.css" media="(min-width: 700px)">
+
+  
+  
   <script src="scripts/library.js" defer></script>
 </head>
 <body>
+
+  
   <header>
     <div class="logo-container">
-      <h1>The Cozy Nook</h1>
+      <p class="brand-title">The Cozy Nook</p>
       <p class="tagline">Your Sanctuary for Mystery, Thriller &amp; Romance</p>
     </div>
     <button id="hamburger-btn" aria-label="Toggle Navigation" aria-expanded="false">&#9776;</button>
@@ -28,8 +52,10 @@
     </nav>
   </header>
 
+ 
+  
   <main>
-    <h2>Book Collection</h2>
+    <h1>Book Collection</h1>
 
     <div class="filter-controls">
       <input type="text" id="search-input" placeholder="Search by title or author...">
@@ -44,9 +70,12 @@
     <div id="book-container" class="card-grid"></div>
   </main>
 
+ 
+  
   <footer>
     <p>&copy; 2026 Gabriella Mujinga Ilunga | The Cozy Nook</p>
     <p><span id="lastModified"></span></p>
   </footer>
+
 </body>
 </html>

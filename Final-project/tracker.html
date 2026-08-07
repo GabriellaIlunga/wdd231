@@ -3,20 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>The Cozy Nook | Reading Tracker</title>
   <meta name="description" content="Track your personal reading goals and progress with The Cozy Nook reading tracker.">
   <meta name="author" content="Gabriella Mujinga Ilunga">
-  <title>The Cozy Nook | Reading Tracker</title>
+  
+  
+  
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  
+  
+  
+  <meta property="og:title" content="The Cozy Nook | Reading Tracker & Goals">
+  <meta property="og:description" content="Track your personal reading goals and progress with The Cozy Nook reading tracker. Log your completed books and monitor your monthly achievements.">
+  <meta property="og:image" content="https://gabriellailunga.github.io/wdd231/images/favicon.png">
+  <meta property="og:url" content="https://gabriellailunga.github.io/wdd231/tracker.html">
+  <meta property="og:type" content="website">
+
+  
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+  
+  
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/large.css" media="(min-width: 700px)">
+
+  
+  
   <script src="scripts/tracker.js" defer></script>
 </head>
 <body>
+
+ 
+  
   <header>
     <div class="logo-container">
-      <h1>The Cozy Nook</h1>
+      <p class="brand-title">The Cozy Nook</p>
       <p class="tagline">Your Sanctuary for Mystery, Thriller &amp; Romance</p>
     </div>
     <button id="hamburger-btn" aria-label="Toggle Navigation" aria-expanded="false">&#9776;</button>
@@ -28,12 +53,14 @@
     </nav>
   </header>
 
+  
+  
   <main>
-    <h2>Reading Goal Tracker</h2>
+    <h1>Reading Goal Tracker</h1>
 
     <section class="tracker-dashboard">
       <form id="tracker-form" class="form-container">
-        <h3>Log New Progress</h3>
+        <h2>Log New Progress</h2>
 
         <label for="book-title">Book Title</label>
         <input type="text" id="book-title" name="bookTitle" required placeholder="e.g. A Dark-Adapted Eye">
@@ -57,21 +84,24 @@
           <option value="1">&#9733;&#9734;&#9734;&#9734;&#9734; (1/5)</option>
         </select>
 
-        <button type="submit" class="btn btn-primary">Save Goal Progress</button>
+        <button type="submit" class="nook-btn-primary">Save Goal Progress</button>
       </form>
     </section>
 
     <section class="tracker-history">
-      <h3>Your Logged Reading Activity</h3>
+      <h2>Your Logged Reading Activity</h2>
       <div id="tracker-list" class="card-grid">
         <p class="empty-msg">No progress logged yet. Use the form above to record your reading milestones!</p>
       </div>
     </section>
   </main>
 
+  
+  
   <footer>
     <p>&copy; 2026 Gabriella Mujinga Ilunga | The Cozy Nook</p>
     <p><span id="lastModified"></span></p>
   </footer>
+
 </body>
 </html>

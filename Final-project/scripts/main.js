@@ -21,13 +21,12 @@ document.addEventListener("DOMContentLoaded", () => {
   navLinks.forEach((link) => {
     const href = link.getAttribute("href");
     if (href === currentPath || (currentPath === "" && href === "index.html")) {
-      link.classList.add("active");
+      link.classList.add("nook-active");
     } else {
-      link.classList.remove("active");
+      link.classList.remove("nook-active");
     }
   });
 
-  
   const forumForm = document.getElementById("forum-form");
   if (forumForm) {
     forumForm.addEventListener("submit", (e) => {
@@ -44,7 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  
   const contactForm = document.getElementById("contact-form");
   if (contactForm) {
     contactForm.addEventListener("submit", (e) => {

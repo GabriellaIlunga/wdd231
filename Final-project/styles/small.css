@@ -144,12 +144,14 @@ h2 {
   color: var(--secondary-color);
   margin-bottom: 1rem;
   font-size: 1.5rem;
+  text-align: center;
 }
 
 h3 {
   font-family: var(--font-heading);
   color: var(--primary-color);
   margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 .section-title {
@@ -197,12 +199,58 @@ h3 {
   font-size: 1.6rem;
   margin-bottom: 0.5rem;
   color: var(--primary-color);
+  text-align: center;
 }
 
 .intro-content p {
   font-size: 0.98rem;
   color: var(--text-dark);
   line-height: 1.6;
+}
+
+.search-filter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  max-width: 600px;
+  margin: 0 auto 1.5rem auto;
+  width: 100%;
+}
+
+.search-bar {
+  position: relative;
+  width: 100%;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 0.65rem 1rem 0.65rem 2.5rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 20px;
+  background-color: var(--card-bg);
+  color: var(--text-dark);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: var(--shadow-glow);
+}
+
+.search-bar::before {
+  content: '🔍';
+  position: absolute;
+  left: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.9rem;
+  opacity: 0.7;
 }
 
 .botm-hero {
@@ -322,8 +370,15 @@ h3 {
 }
 
 .favorites-section,
-.sanctuary-section {
+.sanctuary-section,
+.library-section {
   margin-top: 2.5rem;
+}
+
+.favorites-section h2,
+.sanctuary-section h2,
+.library-section h2 {
+  text-align: center;
 }
 
 .genre-pills {
@@ -352,10 +407,6 @@ h3 {
   border-color: var(--primary-color);
 }
 
-/* ===================================================
-   CARD GRID & BOOK CARD BORDERS (Mobile / Small Screens)
-   =================================================== */
-
 .card-grid,
 #favorites-container,
 #library-container {
@@ -367,10 +418,8 @@ h3 {
   scroll-snap-type: x mandatory;
 }
 
-/* General Book Card Borders & Framing */
 .nook-card,
-.book-card,
-.card {
+.book-card {
   flex: 0 0 280px;
   scroll-snap-align: start;
   background-color: var(--card-bg);
@@ -389,8 +438,7 @@ h3 {
 }
 
 .nook-card:hover,
-.book-card:hover,
-.card:hover {
+.book-card:hover {
   transform: translateY(-4px);
   border-color: var(--accent-color);
   border-bottom-color: var(--primary-color);
@@ -574,6 +622,7 @@ h3 {
 .form-container h3 {
   font-size: 1.1rem;
   margin-bottom: 0.2rem;
+  text-align: center;
 }
 
 .form-container label {

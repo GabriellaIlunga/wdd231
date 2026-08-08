@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
     lastModifiedElement.textContent = `Last Modified: ${document.lastModified}`;
   }
 
-  
   const currentPath = window.location.pathname.split("/").pop() || "index.html";
   const navLinks = document.querySelectorAll("#primary-nav a");
 
@@ -17,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  
   const hamburgerBtn = document.getElementById("hamburger-btn");
   const primaryNav = document.getElementById("primary-nav");
 
@@ -34,7 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  
   const logForm = document.getElementById("log-form");
   const logConfirmation = document.getElementById("log-confirmation");
 

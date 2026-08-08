@@ -4,20 +4,18 @@ document.addEventListener("DOMContentLoaded", () => {
     lastModifiedElement.textContent = `Last Modified: ${document.lastModified}`;
   }
 
-  
   const currentPath = window.location.pathname.split("/").pop() || "index.html";
   const navLinks = document.querySelectorAll("#primary-nav a");
 
   navLinks.forEach((link) => {
     const href = link.getAttribute("href");
     if (href === currentPath || (currentPath === "" && href === "index.html")) {
-      link.classList.add("active");
+      link.classList.add("nook-active");
     } else {
-      link.classList.remove("active");
+      link.classList.remove("nook-active");
     }
   });
 
-  
   const hamburgerBtn = document.getElementById("hamburger-btn");
   const primaryNav = document.getElementById("primary-nav");
 
@@ -34,7 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  
   const trackerForm = document.getElementById("tracker-form");
   const trackerList = document.getElementById("tracker-list");
 
@@ -54,10 +51,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     entries.forEach((item, index) => {
-      const card = document.createElement("div");
-      card.className = "card";
+      const card = document.createElement("article");
+      card.className = "nook-card nook-book-card";
 
-      
       const stars = "★".repeat(Number(item.rating) || 0) + "☆".repeat(5 - (Number(item.rating) || 0));
 
       card.innerHTML = `
@@ -65,7 +61,8 @@ document.addEventListener("DOMContentLoaded", () => {
         <p><strong>Pages Completed:</strong> ${item.pagesRead}</p>
         <p><strong>Status:</strong> ${item.readingStatus}</p>
         <p><strong>Rating:</strong> ${stars}</p>
-        <button class="btn btn-secondary delete-btn" data-index="${index}">Remove</button>
+        <br>
+        <button class="nook-btn nook-btn-secondary delete-btn" data-index="${index}">Remove</button>
       `;
       trackerList.appendChild(card);
     });

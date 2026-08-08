@@ -1,11 +1,6 @@
-@media (min-width: 768px) {
-  #hamburger-btn {
-    display: block;
-    top: 1.5rem;
-    right: 2rem;
-  }
-
+@media (min-width: 700px) {
   header {
+    position: relative;
     padding: 2.2rem 2rem 1.6rem;
     display: flex;
     flex-direction: column;
@@ -13,9 +8,32 @@
     text-align: center;
   }
 
+  #hamburger-btn,
+  #hamburger-toggle {
+    display: block;
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    background: var(--primary-color);
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    padding: 0.3rem 0.7rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    line-height: 1;
+    z-index: 100;
+    transition: all 0.3s ease;
+  }
+
+  #hamburger-btn:hover,
+  #hamburger-toggle:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+  }
+
   .brand-title {
     font-size: 2.8rem;
-    text-align: center;
   }
 
   #primary-nav {
@@ -23,24 +41,57 @@
     margin: 1.2rem auto 0;
   }
 
-  /* Centered Mustard Gold Header */
-  .library-section h2,
-  .section-title,
-  #library-title {
-    text-align: center;
-    color: #D9822B;
-    font-family: var(--font-heading);
-    font-size: 2.2rem;
-    font-weight: 800;
-    margin-bottom: 1.2rem;
-    letter-spacing: 0.5px;
+  .intro-section .intro-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 2rem;
+    align-items: center;
+    text-align: left;
+    padding: 2rem;
   }
 
-  /* Centered Search and Filter Controls directly below Header */
-  .search-filter-container,
+  .botm-section {
+    max-width: 650px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    text-align: left;
+  }
+
+  .botm-section .botm-content {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .botm-section .botm-actions {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    max-width: 100%;
+  }
+
+  
+  main section.section-container .nook-card-grid,
+  main section.favorites-section .nook-card-grid,
+  main section.sanctuary-section .nook-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+    width: 100%;
+  }
+
+  main div.bottom-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: start;
+    margin-top: 2.5rem;
+  }
+
   .filter-controls {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 1rem;
@@ -49,104 +100,74 @@
     width: 100%;
   }
 
-  .filter-controls input,
-  .filter-controls select,
-  .search-bar input {
-    width: 100%;
-    height: 52px;
-    padding: 0.85rem 1.25rem;
-    font-size: 1.05rem;
+  .filter-controls input#search-input {
+    flex: 1.8;
+    min-width: 260px;
+    padding: 0.65rem 1rem;
+    font-size: 0.95rem;
     font-family: var(--font-body);
     color: var(--text-dark);
-    background-color: var(--card-bg);
-    border: 2px solid var(--primary-color);
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-sm);
-    transition: all 0.3s ease;
-  }
-
-  .filter-controls input:focus,
-  .filter-controls select:focus,
-  .search-bar input:focus {
+    background-color: var(--card-bg, #eadcd0);
+    border: 2px solid var(--primary-color, #2c1810);
+    border-radius: var(--radius-sm, 8px);
+    box-shadow: var(--shadow-sm, 0 3px 8px rgba(44, 24, 16, 0.12));
     outline: none;
-    border-color: #D9822B;
-    box-shadow: var(--shadow-glow);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
   }
 
-  .intro-grid {
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 2rem;
-    align-items: center;
-    text-align: left;
+  .filter-controls select#genre-filter {
+    flex: 1;
+    min-width: 180px;
+    padding: 0.65rem 1rem;
+    font-size: 0.95rem;
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    background-color: var(--card-bg, #eadcd0);
+    border: 2px solid var(--primary-color, #2c1810);
+    border-radius: var(--radius-sm, 8px);
+    box-shadow: var(--shadow-sm, 0 3px 8px rgba(44, 24, 16, 0.12));
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
   }
 
-  .intro-image {
-    max-width: 100%;
-    height: 100%;
-    max-height: 220px;
+  .filter-controls input#search-input:focus,
+  .filter-controls select#genre-filter:focus {
+    border-color: var(--accent-color, #d9822b);
+    box-shadow: 0 0 0 3px rgba(217, 130, 43, 0.25);
   }
 
-  .nook-card-grid,
-  .card-grid,
-  #favorites-container,
-  #library-container {
+  div#book-container,
+  div#book-container.card-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    align-items: stretch;
-    overflow-x: visible;
+    gap: 1.75rem;
+    width: 100%;
   }
 
-  /* Bordered Cards with Centered Content Alignment */
-  .nook-card,
-  .nook-book-card,
-  .book-card,
-  .card {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    flex: initial;
-    border: 2px solid var(--primary-color);
-    border-bottom: 4px solid #D9822B;
-    border-radius: var(--radius-md);
-    background-color: var(--card-bg);
-    box-shadow: var(--shadow-sm);
+  #book-container .card,
+  #book-container .nook-card {
+    background-color: var(--card-bg, #eadcd0);
+    border: 2px solid var(--primary-color, #2c1810);
+    border-bottom: 4px solid var(--accent-color, #d9822b);
+    border-radius: var(--radius-md, 14px);
     padding: 1.25rem;
+    box-shadow: var(--shadow-sm, 0 3px 8px rgba(44, 24, 16, 0.12));
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     justify-content: space-between;
+    height: 100%;
   }
 
-  .nook-card img,
-  .book-card img,
-  .book-cover {
-    margin: 0 auto 0.85rem auto;
-    display: block;
-  }
-
-  .nook-card h3,
-  .book-card h3,
-  .nook-card p,
-  .book-card p {
-    text-align: center;
+  #book-container img {
     width: 100%;
-  }
-
-  .nook-card:hover,
-  .nook-book-card:hover,
-  .book-card:hover,
-  .card:hover {
-    border-color: #D9822B;
-    box-shadow: var(--shadow-glow);
-  }
-
-  .bottom-grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    align-items: stretch;
+    max-width: 160px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: var(--radius-sm, 8px);
+    border: 1px solid var(--primary-color, #2c1810);
+    margin-bottom: 0.75rem;
   }
 }

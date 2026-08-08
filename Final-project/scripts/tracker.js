@@ -1,7 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // ==========================================
-  // 1. Navigation Toggle Logic
-  // ==========================================
   const hamburgerToggle = document.getElementById('hamburger-toggle');
   const primaryNav = document.getElementById('primary-nav');
 
@@ -13,13 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ==========================================
-  // 2. Reading Tracker Logic (localStorage)
-  // ==========================================
   const trackerForm = document.getElementById('tracker-form');
   const trackerList = document.getElementById('tracker-list');
 
-  // Load existing activities from localStorage on page load
   displayLoggedActivities();
 
   if (trackerForm) {
@@ -43,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
       saveEntryToStorage(newEntry);
       displayLoggedActivities();
 
-      // Reset form fields
+      
       trackerForm.reset();
     });
   }
@@ -54,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function saveEntryToStorage(entry) {
     const entries = getStoredEntries();
-    entries.unshift(entry); // Add latest activity to the top
+    entries.unshift(entry);
     localStorage.setItem('cozyNookTracker', JSON.stringify(entries));
   }
 
@@ -87,9 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
     return div.innerHTML;
   }
 
-  // ==========================================
-  // 3. Footer Last Modified Date
-  // ==========================================
   const lastModifiedSpan = document.getElementById('lastModified');
   if (lastModifiedSpan) {
     lastModifiedSpan.textContent = `Last Modified: ${document.lastModified}`;

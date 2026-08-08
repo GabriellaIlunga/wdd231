@@ -1,6 +1,3 @@
-/* ==========================================
-   Base Styles & Layout
-   ========================================== */
 :root {
   --primary-color: #2c1810;
   --secondary-color: #8c2d19;
@@ -9,7 +6,6 @@
   --bg-color: #e8dbcf;
   --card-bg: #eadcd0;
   --border-color: #2c1810;
-  --border-gold: #d9822b;
   --text-dark: #2c1810;
   --text-light: #fdfbf7;
   --text-muted: #54453d;
@@ -18,7 +14,6 @@
   --font-body: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
 
   --shadow-sm: 0 3px 8px rgba(44, 24, 16, 0.12);
-  --shadow-md: 0 8px 20px rgba(44, 24, 16, 0.16);
   --shadow-glow: 0 8px 24px rgba(217, 130, 43, 0.3);
   --radius-sm: 8px;
   --radius-md: 14px;
@@ -28,6 +23,12 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -44,10 +45,11 @@ body {
   flex-direction: column;
 }
 
+
 header {
   background-color: var(--primary-color);
   color: var(--text-light);
-  padding: 1.8rem 1rem 1.4rem;
+  padding: 1.5rem 1rem;
   position: relative;
   border-bottom: 4px solid var(--accent-color);
   box-shadow: var(--shadow-sm);
@@ -55,6 +57,7 @@ header {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  width: 100%;
 }
 
 .logo-container {
@@ -65,32 +68,30 @@ header {
 
 .brand-title {
   font-family: var(--font-heading);
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 900;
   color: var(--accent-color);
   line-height: 1.15;
-  letter-spacing: 0.5px;
 }
 
 .tagline {
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   color: var(--text-light);
   font-style: italic;
-  margin-top: 0.35rem;
+  margin-top: 0.25rem;
   opacity: 0.9;
 }
 
-/* Updated Hamburger Control (Replaced #hamburger-btn) */
 #hamburger-toggle {
   display: block;
   position: absolute;
   top: 1.2rem;
   right: 1.2rem;
-  background: transparent;
+  background: var(--primary-color);
   border: 2px solid var(--accent-color);
   color: var(--accent-color);
-  font-size: 1.6rem;
-  padding: 0.25rem 0.65rem;
+  font-size: 1.5rem;
+  padding: 0.3rem 0.7rem;
   border-radius: var(--radius-sm);
   cursor: pointer;
   line-height: 1;
@@ -101,14 +102,13 @@ header {
 #hamburger-toggle:hover {
   background-color: var(--accent-color);
   color: var(--primary-color);
-  box-shadow: var(--shadow-glow);
 }
 
 #primary-nav {
   display: none;
   flex-direction: column;
   width: 100%;
-  margin-top: 1.2rem;
+  margin-top: 1rem;
   gap: 0.4rem;
   border-top: 1px solid rgba(217, 130, 43, 0.3);
   padding-top: 0.8rem;
@@ -121,7 +121,7 @@ header {
 #primary-nav a {
   color: var(--text-light);
   text-decoration: none;
-  padding: 0.75rem 0.9rem;
+  padding: 0.65rem 0.9rem;
   border-radius: var(--radius-sm);
   font-weight: 700;
   font-size: 1rem;
@@ -135,50 +135,323 @@ header {
   color: var(--primary-color);
 }
 
+
 main {
   flex: 1;
-  padding: 1.25rem 1rem 3.5rem;
+  padding: 1.5rem 1rem 3rem;
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
 }
 
-h1, h2 {
+h1, h2, .section-title {
   font-family: var(--font-heading);
   color: var(--secondary-color);
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.4rem;
+  font-size: 1.6rem;
   text-align: center;
 }
 
-h3 {
+.section-subtitle {
+  text-align: center;
+  color: var(--text-muted);
+  margin-bottom: 1.2rem;
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+
+.intro-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.25rem;
+  background-color: var(--card-bg);
+  border: 2px solid var(--primary-color);
+  border-top: 4px solid var(--accent-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.intro-image {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--primary-color);
+}
+
+
+.botm-section {
+  background-color: var(--card-bg);
+  border: 2px solid var(--primary-color);
+  border-top: 4px solid var(--accent-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin: 2rem auto;
+  max-width: 750px;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  position: relative;
+}
+
+.nook-botm-badge {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  font-weight: 800;
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.botm-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.botm-cover {
+  width: 100%;
+  max-width: 180px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--primary-color);
+  box-shadow: var(--shadow-sm);
+  margin: 0 auto;
+}
+
+.botm-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.botm-title {
+  font-family: var(--font-heading);
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+}
+
+.botm-author {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.botm-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.botm-summary {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.botm-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 280px;
+}
+
+/* --- GENRE PILLS --- */
+.nook-genre-pills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.nook-pill {
+  background-color: var(--card-bg);
+  border: 1px solid var(--primary-color);
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.nook-pill.nook-active {
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+}
+
+
+.section-container {
+  margin-bottom: 2.5rem;
+}
+
+.nook-card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.nook-card {
+  background-color: var(--card-bg);
+  border: 2px solid var(--primary-color);
+  border-bottom: 4px solid var(--accent-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.nook-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-sm);
+}
+
+.book-cover {
+  width: 100%;
+  max-width: 160px;
+  height: 230px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--primary-color);
+  margin: 0.5rem auto 1rem;
+}
+
+.nook-card h3 {
   font-family: var(--font-heading);
   color: var(--primary-color);
-  margin-bottom: 0.5rem;
-  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
 }
 
-/* ==========================================
-   Form & Interactive Elements (No 'btn' Classes)
-   ========================================== */
+.nook-card .author {
+  font-weight: 700;
+  color: var(--secondary-color);
+  font-size: 0.95rem;
+}
+
+.nook-card .pages {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.nook-card .description {
+  font-size: 0.9rem;
+}
+
+
+.nook-action,
+.nook-action-primary,
+.nook-action-secondary {
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+  border: 2px solid var(--primary-color);
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+}
+
+.nook-action-secondary {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+}
+
+.nook-action:hover,
+.nook-action-primary:hover,
+.nook-action-secondary:hover {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+
+.quote-container {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  padding: 1.75rem 1.25rem;
+  border-radius: var(--radius-md);
+  border-left: 6px solid var(--accent-color);
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.daily-quote {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.quote-author {
+  color: var(--accent-color);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+
+.bottom-grid-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
 .form-container {
   background-color: var(--card-bg);
   border: 2px solid var(--primary-color);
   border-top: 4px solid var(--accent-color);
-  padding: 1.1rem 1.25rem;
+  padding: 1.5rem;
   border-radius: var(--radius-md);
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
   box-shadow: var(--shadow-sm);
-  width: 100%;
 }
 
-.form-container h2,
 .form-container h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.2rem;
+  font-family: var(--font-heading);
+  color: var(--primary-color);
   text-align: center;
+  margin-bottom: 1rem;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .form-container label {
@@ -191,140 +464,63 @@ h3 {
 .form-container select,
 .form-container textarea {
   width: 100%;
-  padding: 0.45rem 0.65rem;
+  padding: 0.65rem 0.75rem;
   border: 1.5px solid var(--primary-color);
   border-radius: var(--radius-sm);
   font-family: var(--font-body);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   background-color: var(--bg-color);
   color: var(--text-dark);
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.form-container input:focus,
-.form-container select:focus,
-.form-container textarea:focus {
-  outline: none;
-  border-color: var(--accent-color);
-  box-shadow: var(--shadow-glow);
+.form-container textarea {
+  min-height: 100px;
+  resize: vertical;
 }
 
-/* Replaced .nook-btn with .nook-action */
-.nook-action {
-  display: inline-block;
-  padding: 0.75rem 1.25rem;
-  border: 2px solid var(--primary-color);
-  border-radius: var(--radius-sm);
-  font-family: var(--font-body);
-  font-weight: 700;
-  cursor: pointer;
-  text-decoration: none;
-  text-align: center;
-  transition: all 0.3s ease;
-  width: 100%;
-  margin-top: auto;
-}
 
-.nook-action:active {
-  transform: scale(0.98);
-}
-
-.nook-action-primary {
-  background-color: var(--secondary-color);
-  color: var(--text-light);
-  border: 2px solid var(--primary-color);
-  padding: 0.75rem 1.25rem;
-  border-radius: var(--radius-sm);
-  font-family: var(--font-body);
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  width: 100%;
-  margin-top: 0.5rem;
-}
-
-.nook-action-primary:hover {
-  background-color: var(--primary-color);
-  border-color: var(--accent-color);
-  color: var(--accent-color);
-}
-
-.nook-action-secondary {
-  background-color: var(--primary-color);
-  color: var(--text-light);
-  border: 2px solid var(--accent-color);
-  padding: 0.75rem 1.25rem;
-  border-radius: var(--radius-sm);
-  font-family: var(--font-body);
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  width: 100%;
-}
-
-.nook-action-secondary:hover {
-  background-color: var(--accent-color);
-  color: var(--primary-color);
-  border-color: var(--primary-color);
-}
-
-/* ==========================================
-   Card Layout Grid
-   ========================================== */
-.nook-card-grid,
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1.25rem;
-  margin-top: 1.5rem;
-}
-
-.nook-card,
-.book-card {
-  background-color: var(--card-bg);
-  border: 2px solid var(--primary-color);
-  border-bottom: 4px solid var(--accent-color);
-  border-radius: var(--radius-md);
-  padding: 1.25rem 1rem;
-  box-shadow: var(--shadow-sm);
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.nook-card:hover,
-.book-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--accent-color);
-  border-bottom-color: var(--primary-color);
-  box-shadow: var(--shadow-glow);
-}
-
-.empty-msg {
-  font-style: italic;
-  color: var(--text-muted);
-  grid-column: 1 / -1;
-  text-align: center;
-}
-
-/* ==========================================
-   Footer
-   ========================================== */
 footer {
   background-color: var(--primary-color);
   color: var(--text-light);
   text-align: center;
-  padding: 1.25rem 1rem;
+  padding: 1.5rem 1rem;
   margin-top: auto;
   font-size: 0.9rem;
   border-top: 4px solid var(--accent-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nook-social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.social-heading {
+  font-weight: 700;
+  color: var(--text-light);
+}
+
+.nook-social-links a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.nook-social-links a:hover {
+  color: var(--text-light);
+  text-decoration: underline;
 }
 
 #lastModified {
   font-size: 0.85rem;
   color: var(--accent-color);
   font-style: italic;
-  margin-top: 0.4rem;
 }

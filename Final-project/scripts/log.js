@@ -10,24 +10,24 @@ document.addEventListener("DOMContentLoaded", () => {
   navLinks.forEach((link) => {
     const href = link.getAttribute("href");
     if (href === currentPath || (currentPath === "" && href === "index.html")) {
-      link.classList.add("active");
+      link.classList.add("nook-active");
     } else {
-      link.classList.remove("active");
+      link.classList.remove("nook-active");
     }
   });
 
-  const hamburgerBtn = document.getElementById("hamburger-btn");
+  const hamburgerToggle = document.getElementById("hamburger-toggle");
   const primaryNav = document.getElementById("primary-nav");
 
-  if (hamburgerBtn && primaryNav) {
-    hamburgerBtn.addEventListener("click", () => {
+  if (hamburgerToggle && primaryNav) {
+    hamburgerToggle.addEventListener("click", () => {
       const isOpen = primaryNav.classList.toggle("open");
-      hamburgerBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      hamburgerToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
 
       if (isOpen) {
-        hamburgerBtn.innerHTML = "&times;";
+        hamburgerToggle.innerHTML = "&times;";
       } else {
-        hamburgerBtn.innerHTML = "&#9776;";
+        hamburgerToggle.innerHTML = "&#9776;";
       }
     });
   }

@@ -4,14 +4,14 @@ document.addEventListener("DOMContentLoaded", () => {
     lastModifiedElement.textContent = `Last Modified: ${document.lastModified}`;
   }
 
-  const hamburgerBtn = document.getElementById("hamburger-btn");
+  const hamburgerToggle = document.getElementById("hamburger-toggle");
   const primaryNav = document.getElementById("primary-nav");
 
-  if (hamburgerBtn && primaryNav) {
-    hamburgerBtn.addEventListener("click", () => {
+  if (hamburgerToggle && primaryNav) {
+    hamburgerToggle.addEventListener("click", () => {
       const isOpen = primaryNav.classList.toggle("open");
-      hamburgerBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
-      hamburgerBtn.textContent = isOpen ? "❌" : "☰";
+      hamburgerToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      hamburgerToggle.textContent = isOpen ? "❌" : "☰";
     });
   }
 

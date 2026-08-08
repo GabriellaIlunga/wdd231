@@ -1,106 +1,97 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const lastModifiedElement = document.getElementById("lastModified");
-  if (lastModifiedElement) {
-    lastModifiedElement.textContent = `Last Modified: ${document.lastModified}`;
-  }
+document.addEventListener('DOMContentLoaded', () => {
+  // ==========================================
+  // 1. Navigation Toggle Logic
+  // ==========================================
+  const hamburgerToggle = document.getElementById('hamburger-toggle');
+  const primaryNav = document.getElementById('primary-nav');
 
-  const currentPath = window.location.pathname.split("/").pop() || "index.html";
-  const navLinks = document.querySelectorAll("#primary-nav a");
-
-  navLinks.forEach((link) => {
-    const href = link.getAttribute("href");
-    if (href === currentPath || (currentPath === "" && href === "index.html")) {
-      link.classList.add("nook-active");
-    } else {
-      link.classList.remove("nook-active");
-    }
-  });
-
-  const hamburgerBtn = document.getElementById("hamburger-btn");
-  const primaryNav = document.getElementById("primary-nav");
-
-  if (hamburgerBtn && primaryNav) {
-    hamburgerBtn.addEventListener("click", () => {
-      const isOpen = primaryNav.classList.toggle("open");
-      hamburgerBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
-
-      if (isOpen) {
-        hamburgerBtn.innerHTML = "&times;";
-      } else {
-        hamburgerBtn.innerHTML = "&#9776;";
-      }
+  if (hamburgerToggle && primaryNav) {
+    hamburgerToggle.addEventListener('click', () => {
+      primaryNav.classList.toggle('open');
+      const isOpen = primaryNav.classList.contains('open');
+      hamburgerToggle.setAttribute('aria-expanded', isOpen);
     });
   }
 
-  const trackerForm = document.getElementById("tracker-form");
-  const trackerList = document.getElementById("tracker-list");
+  // ==========================================
+  // 2. Reading Tracker Logic (localStorage)
+  // ==========================================
+  const trackerForm = document.getElementById('tracker-form');
+  const trackerList = document.getElementById('tracker-list');
 
-  if (!trackerForm || !trackerList) return;
+  // Load existing activities from localStorage on page load
+  displayLoggedActivities();
 
-  function loadProgress() {
-    const saved = localStorage.getItem("cozyNookTracker");
-    const entries = saved ? JSON.parse(saved) : [];
-    displayEntries(entries);
+  if (trackerForm) {
+    trackerForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      const titleInput = document.getElementById('book-title');
+      const pagesInput = document.getElementById('pages-read');
+      const statusInput = document.getElementById('reading-status');
+      const ratingInput = document.getElementById('rating');
+
+      const newEntry = {
+        id: Date.now(),
+        title: titleInput.value.trim(),
+        pages: pagesInput.value,
+        status: statusInput.value,
+        rating: ratingInput.value,
+        date: new Date().toLocaleDateString()
+      };
+
+      saveEntryToStorage(newEntry);
+      displayLoggedActivities();
+
+      // Reset form fields
+      trackerForm.reset();
+    });
   }
 
-  function displayEntries(entries) {
-    trackerList.innerHTML = "";
+  function getStoredEntries() {
+    return JSON.parse(localStorage.getItem('cozyNookTracker')) || [];
+  }
+
+  function saveEntryToStorage(entry) {
+    const entries = getStoredEntries();
+    entries.unshift(entry); // Add latest activity to the top
+    localStorage.setItem('cozyNookTracker', JSON.stringify(entries));
+  }
+
+  function displayLoggedActivities() {
+    if (!trackerList) return;
+
+    const entries = getStoredEntries();
+
     if (entries.length === 0) {
-      trackerList.innerHTML = `<p class="empty-msg">No progress logged yet. Use the form above to record your reading milestones!</p>`;
+      trackerList.innerHTML = `
+        <p class="empty-msg">No progress logged yet. Use the form above to record your reading milestones!</p>
+      `;
       return;
     }
 
-    entries.forEach((item, index) => {
-      const card = document.createElement("article");
-      card.className = "nook-card nook-book-card";
-
-      const stars = "★".repeat(Number(item.rating) || 0) + "☆".repeat(5 - (Number(item.rating) || 0));
-
-      card.innerHTML = `
-        <h3>${item.bookTitle}</h3>
-        <p><strong>Pages Completed:</strong> ${item.pagesRead}</p>
-        <p><strong>Status:</strong> ${item.readingStatus}</p>
-        <p><strong>Rating:</strong> ${stars}</p>
-        <br>
-        <button class="nook-btn nook-btn-secondary delete-btn" data-index="${index}">Remove</button>
-      `;
-      trackerList.appendChild(card);
-    });
-
-    document.querySelectorAll(".delete-btn").forEach((btn) => {
-      btn.addEventListener("click", (e) => {
-        const idx = e.target.getAttribute("data-index");
-        removeEntry(idx);
-      });
-    });
+    trackerList.innerHTML = entries.map(entry => `
+      <article class="nook-card">
+        <h3>${escapeHtml(entry.title)}</h3>
+        <p><strong>Pages Completed:</strong> ${entry.pages}</p>
+        <p><strong>Status:</strong> ${entry.status}</p>
+        <p><strong>Rating:</strong> ${'&#9733;'.repeat(entry.rating)}${'&#9734;'.repeat(5 - entry.rating)}</p>
+        <p><small>Logged on ${entry.date}</small></p>
+      </article>
+    `).join('');
   }
 
-  function removeEntry(index) {
-    const saved = localStorage.getItem("cozyNookTracker");
-    if (!saved) return;
-    let entries = JSON.parse(saved);
-    entries.splice(index, 1);
-    localStorage.setItem("cozyNookTracker", JSON.stringify(entries));
-    displayEntries(entries);
+  function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
   }
 
-  trackerForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const bookTitle = document.getElementById("book-title").value;
-    const pagesRead = document.getElementById("pages-read").value;
-    const readingStatus = document.getElementById("reading-status").value;
-    const rating = document.getElementById("rating").value;
-
-    const newEntry = { bookTitle, pagesRead, readingStatus, rating };
-
-    const saved = localStorage.getItem("cozyNookTracker");
-    const entries = saved ? JSON.parse(saved) : [];
-    entries.push(newEntry);
-
-    localStorage.setItem("cozyNookTracker", JSON.stringify(entries));
-    trackerForm.reset();
-    displayEntries(entries);
-  });
-
-  loadProgress();
+  // ==========================================
+  // 3. Footer Last Modified Date
+  // ==========================================
+  const lastModifiedSpan = document.getElementById('lastModified');
+  if (lastModifiedSpan) {
+    lastModifiedSpan.textContent = `Last Modified: ${document.lastModified}`;
+  }
 });
